@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Music Player</title>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1 class="heading">House Of Vigro Deep SA</h1>
+      <div class="music-container">
+        <div id="cover-box">
+          <img src="./img/mhmr.png" alt="cover-image" id="cover" />
+    <b>1.6</b>k estimated streams Per Day      </div>
+   
+        <div id="music-box">
+          <audio id="disc"></audio>
+          <div id="music-info">
+            <h2 id="title"></h2>
+            <h3 id="artist"></h3>
+            <div id="progress-container">
+              <div id="progress"></div>
+            </div>
+            <div id="timer-bar">
+              <span id="timer">0:00</span>
+              <span id="duration"></span>
+            </div>
+          </div>
+          <div id="control-box">
+            <i id="prev" class="btn fas fa-backward"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-skip-start-fill" viewBox="0 0 16 16">
+            <path d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0V4z"/>
+            </svg></i>
+            <i id="play" class="special-btn fas fa-play"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+            </svg></i>
+            <i id="next" class="btn fas fa-forward"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-skip-end-fill" viewBox="0 0 16 16">
+            <path d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0V4z"/>
+            </svg></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
