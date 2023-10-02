@@ -1,5 +1,5 @@
-<!---Version ===>[0.0.0.1.0] (Build 1)--->
-
+<!---Version ===>[10] (Build 1)--->
+<!---This version Has A picture Zooming--->
 <!---Created By Lodwick Masete--->
 <!---If you Were able to see this sourcecode
 -you Might be a programer,Let's Work Together in puting This
@@ -28,11 +28,20 @@ publishing this web as it is not granted/allowed By the author--->
 <script src="./js/bootstrap.bundle.min.js"></script>
 <!-- Bootstrap for bottom nav end-->
 
+
 <!---4-tabs--->
   <link rel="stylesheet" type="text/css" href="./css/tab-style.css">
   <script src="./js/4-tabs.js"></script>
 <!---4-tabs end--->
 
+<!---4-tabs--->
+  <link rel="stylesheet" type="text/css" href="./css/tab-style.css">
+  <script src="./js/res.js"></script>
+<!---4-tabs end--->
+
+  <!--- style for picture enlargement--->
+  <link rel="stylesheet" type="text/css" href="./css/res.css">
+  <!---style for picture enlargement--->
 
 <div class="top">
 
@@ -219,13 +228,13 @@ float:right;
 <a href="./stream/img/bitso.png"><img src="./stream/img/bitso.png" width="50px" height="50px" ></a>
 <b>_ _:_ _</b><br>
 <a href="./stream.html" class="link">Listen Now</a> 
-<a href="./stream/skelem-tone.mp3" download="./stream/skelem-tone.mp3" class="link">Download Now</a></center>
+<a href="./stream/sad-secrets.mp3" download="./stream/sad-secrets.mp3" class="link">Download Now</a>
   </div>
 
   <div id="paris">
     <span class="tab-close">&times</span>
-    <h3>Pending Update</h3>
-<i>Some Albums May Be left out,But we'll add them soon as possible</i>
+    <h3>Vigro Deep's Albums & EPS</h3>
+<i>7- items</i>
   </div>
 
   <div id="tokyo">
@@ -237,9 +246,6 @@ float:right;
 </div>
 
 
-<div class="col-5 col-md">
-
-</div>
 
  <div class="stories">
 <div id="tab1" class="tab-content">
@@ -251,50 +257,43 @@ float:right;
 
 
 <!---caraousel start--->
-
+<!---
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
+<!--- <div class="carousel-indicators">
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  
- 
- 
+--->  
+<!--- 
+
   <div class="carousel-inner">
     <div class="carousel-item active">
     
-    
-    <!---Song Promotion--->
-
-    <img class="bd-placeholder-img" src="./images/articles/2.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></img>
+    <img class="bd-placeholder-img" src="./images/stories/14-1.png" width="90%" height="90%"   xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></img>
 
       <div class="container">
         <div class="carousel-caption text-start">
-          <h1>New Article</h1><hr>
-          <b class="link"> Written By Lodwick Masete</b> 
-        <p><a class="btn btn-lg btn-primary" href="blog.html">Read Now</a></p>
-        </div>
+          <h1>International</h1><hr>
+          <b class="link"> Vigro Deep</b> | <b class="link">More TBA</b>
+        <p><b class="btn btn-lg btn-primary" onclick="zoomImage('./images/stories/14.png')">view</b></p>
+     </div>
       </div>
     </div>
-  
+
     <div class="carousel-item">
    
-   <img class="bd-placeholder-img" src="./stream/img/bitso.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></img>    
+   <img class="bd-placeholder-img" src="./images/stories/13-1.png" width="90%" height="90%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></img>    
     <div class="container">
       <div class="carousel-caption text-start">
-          <h1>Sad Secrets</h1><hr>
-        <b class="link">Skelem Tone</b> <b class="link">Officixl Bitso</b> ★
-        <p><a class="btn btn-lg btn-primary" href="https://youtu.be/qJ94vEooqjg">Stream</a></p>
-      </div>
-    </div>
-         </div>
+          <h1>International</h1><hr>
+        <b class="link">Vigro Deep</b> | <b class="link">Big Woo</b>
+        <p><b class="btn btn-lg btn-primary" onclick="zoomImage('./images/stories/13.png')">View</b></p>
+     </div>
+</div>
 </div>
 
-    <!---Story--->
-<!--it is possible to add A ducplicate Code--->
-    <!---Story--->
-
+<!--
 
   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -309,18 +308,19 @@ float:right;
 <!---caraiusel end--->
 
 
-
 <select id="filterSelect">
   <option value="option1" selected>Select</option>
   <option value="option2">introduction</option>
 </select>
  <br>
+ 
+ 
 <div id="contentDiv">
   <div class="option1"></div>
   <div class="option2">
   <fieldset>
   <i>introduction</i>
-  <a href="./images/stories/2.png" download="./images/stories/2.png">  <img src="./images/stories/2.png"></img></a>
+  <img src="./images/stories/2.png" onclick="zoomImage('./images/stories/2.png')"></img>
   <small class="text-muted"> 90 Days</small> |  
   <small class="text-muted">703 277 Views</small> | 
   <small class="text-muted">707 272 Downloads</small>
@@ -342,8 +342,8 @@ float:right;
   <br>
   </div>
 
-</div>
 
+</div>
 
 
 <style type="text/css">
@@ -358,27 +358,97 @@ select{
 
 width:70%;
 }
+
+
 </style>
 
 
 Recent Stories
+<br>
 
+    <style>
+        .zoomed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .zoomed img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .unzoom-btn {
+            position: absolute;
+            top: 10px;
+            left:10px;
+            padding: 5px 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .download-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="zoomed-container" id="xx">
+        <div class="zoomed">
+            <img id="zoomed-img" src="" alt="">
+            <a id="download-btn" class="download-btn" href="" download>Download</a>
+            <b class="unzoom-btn" onclick="unzoomImage()">X</b>
+
+        </div>
+    </div>
+</body>
+
+
+
+
+    <script>
+//placed here because it hides the zoomed image when page is loaded
+//if you're viewing this and have some alternative Idea send email
+{
+document.getElementById("xx").style.display = "none";
+}
+    </script>
+
+<hr>
+<i> <b>New</b>, You can Now View images & download them without navigating by simply tapping/clicking the image</i>
+<br>
 <br>
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./images/stories/events/event10.png">    <img src="./images/stories/events/event10.png"></a>
-  <small class="text-muted">22 September 2023</small> |  
-  <small class="text-muted"> 1 939 Views</small> | 
-  <small class="text-muted"> 1 355 Downloads</small>
+  <img src="./images/stories/events/event11.png" onclick="zoomImage('./images/stories/events/event11.png')">
+  <small class="text-muted">02 October 2023</small> |  
+  <small class="text-muted"> 1 100 Views</small> | 
+  <small class="text-muted">867 Downloads</small>
 <br>
 
-<b>Nadia Nakai<i></i></b>  
+<b>New Squad</b>  
 
 <p>
-Monday's Cool/Babyboy Events Is bringing You One of the Best Female Celebrity <b>Nakai ...</b>Who seems to be  A role Model To every One.
+Vigro Deep & his monday's cool events Are creating History.
+more than 25% of most Popular South African Amapiano genre Producers & Vocalists
+ were booked at <b>LEASHMA LOUNGE</b> in the past +10 Events of Monday's Cool including As of 
+ Today.
 </p>    
-   <a href="./images/stories/events/event10.png" download="./images/stories/events/event10.png"><center><button type="button" class="w-100 btn btn-lg btn-primary">Download</button></center></a>
+   <a href="./images/stories/events/event11.png" download="./images/stories/events/event11.png"><center><button type="button" class="w-100 btn btn-lg btn-primary">Download</button></center></a>
  </div>
    </div>
 
@@ -388,7 +458,33 @@ Monday's Cool/Babyboy Events Is bringing You One of the Best Female Celebrity <b
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./images/stories/events/event9.png">    <img src="./images/stories/events/event9.png"></a>
+ <img src="./images/stories/events/event10.png" onclick="zoomImage('./images/stories/events/event10.png')">
+  <small class="text-muted">22 September 2023</small> |  
+  <small class="text-muted"> 8 939 Views</small> | 
+  <small class="text-muted"> 8 338Downloads</small>
+<br>
+
+
+<b>Nadia Nakai<i></i></b>  
+
+<p>
+Monday's Cool/Babyboy Events Is bringing You One of the Best Female Celebrity <b>Nakai ...</b>Who seems to be  A role Model To every One.
+</p>    
+  <a href="./images/stories/events/event10.png" download="./images/stories/events/event10.png" > <button type="button" class="w-100 btn btn-lg btn-primary">Download</button></a>
+ </div>
+   </div>
+
+</fieldset>
+
+
+
+
+
+<br>
+<fieldset>
+    <div class="row row-cols-1">
+    <div class="col">
+  <img src="./images/stories/events/event9.png" onclick="zoomImage('./images/stories/events/event9.png')">
   <small class="text-muted">20 September 2023</small> |  
   <small class="text-muted"> 1 478 Views</small> | 
   <small class="text-muted">1 230 Downloads</small>
@@ -411,7 +507,7 @@ to be the right Move
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./images/stories/10.png"><img src="./images/stories/10.png"></a>
+<img src="./images/stories/10.png" onclick="zoomImage('./images/stories/10.png')">
   <small class="text-muted">17 September 2023</small> |  
   <small class="text-muted"> 18 299 Views</small> | 
   <small class="text-muted">14 696 Downloads</small>
@@ -434,7 +530,7 @@ Vigro Deep Seems to create a new international Bond with this Guy 🔥❤️
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./images/stories/events/event8.png">    <img src="./images/stories/events/event8.png"></a>
+<img src="./images/stories/events/event8.png" onclick="zoomImage('./images/stories/events/event8.png')">
   <small class="text-muted">14 September 2023</small> |  
   <small class="text-muted"> 39 339 Views</small> | 
   <small class="text-muted">31 283 Downloads</small>
@@ -458,7 +554,7 @@ Monday's Cool/Babyboy Events Is Diging Deeper, Now With Kelvin MoMo.
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./images/stories/events/event7.png">    <img src="./images/stories/events/event7.png"></a>
+  <img src="./images/stories/events/event7.png" onclick="zoomImage('./images/stories/events/event7.png')">
   <small class="text-muted">11 September 2023</small> |  
   <small class="text-muted"> 10 309 Views</small> | 
   <small class="text-muted">6 998 Downloads</small>
@@ -479,7 +575,7 @@ Vigro deep Hosts More celebrites to celebrate his Birthday.at @<b>LEASHAMA_LOUNG
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="https://bfan.link/it-don-t-matter">    <img src="./images/stories/11.png"></a>
+<img src="./images/stories/11.png" onclick="zoomImage('./images/stories/11.png')">
   <small class="text-muted">8 September 2023</small> |  
   <small class="text-muted">60 189 Views</small> | 
   <small class="text-muted">59 278 Downloads</small>
@@ -499,7 +595,7 @@ New Track In september After Souncheck
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./images/stories/4.png">    <img src="./images/stories/4.png"></a>
+  <img src="./images/stories/4.png" onclick="zoomImage('./images/stories/4.png')">
   <small class="text-muted">6 september 2023</small> |  
   <small class="text-muted">105 384 Plays</small> | 
   <small class="text-muted">81 920 Downloads</small>
@@ -521,7 +617,7 @@ happiest Birthday To Kamohelo Phetla
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./videos/documentary.mp4">    <img src="./images/documentary.png"></a>
+  <img src="./images/documentary.png" onclick="zoomImage('./images/documentary.png')">
   <small class="text-muted">04 september 2023</small> |  
   <small class="text-muted">99 384 Plays</small> | 
   <small class="text-muted">94 120 Downloads</small>
@@ -550,8 +646,8 @@ intimate look into the life and journey of our favorite star. It's a chance to s
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./images/stories/events/event6.1.png">    <img src="./images/stories/events/event6.1.png"></a>
-  <small class="text-muted">02 sepyember</small> |  
+  <img src="./images/stories/events/event6.1.png" onclick="zoomImage('./images/stories/events/event6.1.png')">
+  <small class="text-muted">02 september</small> |  
   <small class="text-muted">99 009 Views</small> | 
   <small class="text-muted">40 079 Downloads</small>
 <br>
@@ -574,7 +670,7 @@ Baby Boy events,Monday's cool is Welcoming entering September Kabza De Small On 
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./images/stories/events/event4.png">    <img src="./images/stories/events/event4.png"></a>
+  <img src="./images/stories/events/event4.png" onclick="zoomImage('./images/stories/events/event4.png')">
   <small class="text-muted">28 August 2023</small> |  
   <small class="text-muted">7 239 Views</small> | 
   <small class="text-muted">1 540 Downloads</small>
@@ -597,10 +693,10 @@ Baby Boy events,Monday's cool is Saying Good bye August by presenting you Focali
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./images/stories/events/event7.png">    <img src="./images/stories/events/event3.png"></a>
+<img src="./images/stories/events/event3.png" onclick="zoomImage('./images/stories/events/event3.png')">
   <small class="text-muted">11 days</small> |  
-  <small class="text-muted">284 239 Views</small> | 
-  <small class="text-muted">381 540 Downloads</small>
+  <small class="text-muted">285 999 Views</small> | 
+  <small class="text-muted">709 940 Downloads</small>
 <br>
 
 <b>Daliwonga</b>  
@@ -620,10 +716,10 @@ Baby Boy events,Monday's cool is Saying Good bye August by presenting you Daliwo
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./images/stories/events/event5.png">    <img src="./images/stories/events/event5.png"></a>
-  <small class="text-muted">12 days</small> |  
-  <small class="text-muted">90 239 Plays</small> | 
-  <small class="text-muted">81 540 Downloads</small>
+<img src="./images/stories/events/event5.png" onclick="zoomImage('./images/stories/events/event5.png')">
+  <small class="text-muted">28 August</small> |  
+  <small class="text-muted">93 239 Plays</small> | 
+  <small class="text-muted">85 540 Downloads</small>
 <br>
 
 <b>Morda</b>  
@@ -642,10 +738,10 @@ Baby Boy events,Monday's cool presents  a southAfrican Dj Morda To serve at the 
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-  <a href="./images/stories/events/event2.png">  <img src="./images/stories/events/event2.png"></img></a>
-  <small class="text-muted">13 days</small> |  
-  <small class="text-muted">509 839 Plays</small> | 
-  <small class="text-muted">464 540 Downloads</small>
+  <img src="./images/stories/events/event2.png" onclick="zoomImage('./images/stories/events/event2.png')"></img>
+  <small class="text-muted">26 July 2023</small> |  
+  <small class="text-muted">509 839 Views</small> | 
+  <small class="text-muted">664 540 Downloads</small>
 <br>
 
 <b>Schechuled Gigs</b>  
@@ -664,10 +760,10 @@ Vigro deep's Schechule For the weekend until Monday as more Gigs Are to Be confi
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
- <a href="./images/stories/events/event.png">   <img src="./images/stories/events/event.png"></a>
-  <small class="text-muted">30 days</small> |  
-  <small class="text-muted">911 239 Plays</small> | 
-  <small class="text-muted">960 540 Downloads</small>
+ <img src="./images/stories/events/event.png" onclick="zoomImage('./images/stories/events/event.png')">
+  <small class="text-muted">04 June 2023</small> |  
+  <small class="text-muted">1m Views</small> | 
+  <small class="text-muted">990 699 Downloads</small>
 <br>
 
 <b>Monday's cool</b>  
@@ -680,10 +776,9 @@ Monday's Cool is Brought To you By Vigro Deep ,booking Several Producers & Artis
    </div>
 
 </fieldset>
-
 </div>
 
-<!---Albums Tabs--->
+<!---Albums Tab--->
 
 <div class="set1">
 <br class="set1">
@@ -693,16 +788,17 @@ Monday's Cool is Brought To you By Vigro Deep ,booking Several Producers & Artis
 Albums & EPs
 <br>
 
+
 <fieldset>
     <div class="row row-cols-1">
     <div class="col">
-<a href="./images/album_covers/4.png"><img src="./images/album_covers/4.png" alt="Myhousemyrules"></a>
+ <a href="./images/album_covers/4.png" ><img src="./images/album_covers/4.png" alt="Myhousemyrules"></a>
   <small class="text-muted"> 09 december 2022</small> |  
   <small class="text-muted">3.4m</small> | 
   <small class="text-muted">2.30m Downloads</small>
 <br>
 
-<b>My House My Rules</b>  
+<legend>My House My Rules</legend>  
 
 <p>All kinds Of Mixes and vocals Were mixed this Massive album.
 </p>    
@@ -723,7 +819,7 @@ Albums & EPs
   <small class="text-muted">6m Downloads</small>
 <br>
 
-<b>Far Away From Home</b>  
+<legend> Far Away From Home</legend>  
 
 <p>This album consists Of more that 51% Songs That vigro deep Produced While on international.
 </p>    
@@ -744,7 +840,7 @@ Albums & EPs
   <small class="text-muted">4m Downloads</small>
 <br>
 
-<b>Baby Boy 4</b>  
+<legend>Baby Boy 4</legend>  
 
 <p>New style Album That is Different From Ghetto Wave.Will he continue producing This Kind Of sub-genre?
 </p>    
@@ -765,7 +861,7 @@ Albums & EPs
   <small class="text-muted">115 540 Downloads</small>
 <br>
 
-<b>Rise Of a Baby Boy III</b>  
+<legend>Rise Of a Baby Boy III </legend> 
 
 
 <p>In Those times Of Covid-19 Vigro Deep Was indoors Prodcing This album,Which Has A song Dedicated To the pandemic
@@ -782,12 +878,13 @@ Albums & EPs
     <div class="row row-cols-1">
     <div class="col">
  <a href="./images/album_covers/6.png">   <img src="./images/album_covers/6.png" alt="baby boy III"></a>
-  <small class="text-muted">20 August 2020</small> |  
+  <small class="text-muted">20 August 2019</small> |  
   <small class="text-muted">3 20 239 Plays</small> | 
   <small class="text-muted">1 157 540 Downloads</small>
 <br>
 
-<b>Baby Boy III</b>  
+<legend>Baby Boy III</b></legend>
+
 
 
 <p>Baby Boy III Is one of the albums That put vigro deep into map after 2 Debut albums
@@ -811,9 +908,9 @@ Albums & EPs
   <small class="text-muted">3 149 540 Downloads</small>
 <br>
 
-<b>Baby Boy II Reloaded </b>  
+<legend>Baby Boy II : Reloaded </legend>  
 
-
+<b>19 songs</b> | <i>2 hours : 16 minutes</i>
 <p>Nd Album After Few Months Of last album (debut album).
 
 </p>    
@@ -827,13 +924,14 @@ Albums & EPs
     <div class="row row-cols-1">
     <div class="col">
  <a href="./images/album_covers/8.png">   <img src="./images/album_covers/8.png" alt="baby boy"></a>
-  <small class="text-muted">20 August 2020</small> |  
+  <small class="text-muted">19 November 2019</small> |  
   <small class="text-muted">8 20 239 Plays</small> | 
   <small class="text-muted">6 157 540 Downloads</small>
 <br>
 
-<b>Baby Boy</b>  
+<legend>Road To Baby Boy II Ep </legend>
 
+<b>6 songs</b> | <i>0 hour/s: 42 minutes</i>
 
 <p>Few years ago,About +6 years,Vigro deep Released His Debut Album</p>    
  <a href="nodisk.html">   <center><button type="button" class="w-100 btn btn-lg btn-primary">Download</button></center></a>
@@ -961,7 +1059,7 @@ Albums & EPs
         <li><a class="link-secondary" href="#"><strike>Hire Me</strike></a></li>
         <li><a class="link-secondary" href="malito:vigrodeepsafans@gmail.com">Collaborations & Info</a></li>
         <li><a class="link-secondary" href="malito:vigrodeepsafans@gmail.com">Share Projects Ideas</a></li>
-        <li><a class="link-secondary" href="#"><strike>Documentation</strike></a></li>
+        <li><a class="link-secondary" href="#"><strike>SourceCode</strike></a></li>
       </ul>
     </div>
 
@@ -1017,6 +1115,7 @@ Albums & EPs
 </nav>
 
 <!---script to hide/show introduction--->
+<!---youll be able to read the intro when youre viewing offline-->
 
 <script type="text/javascript">
 // Get the select element and content div
