@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOVDSA Gallery</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="./stories/images/5.png" type="image/gif" />
+
+<!-- Bootstrap core CSS -->
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<!---bootstrap core css end--->
+
+
+
+    <style>
+        #image-container {
+            overflow: hidden;
+
+        }
+
+        #image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+
+            left:0;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<!---
+    <div id="image-container">
+        <img id="image" src="./images/stories/1.png" alt="Image" class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></img>
+    </div>
+--->
+    
+<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="navbar-brand" >
+    <button class="button" id="prev">
+Previous
+    </button>    
+  </div>
+     
+  <button class="button" id="download">Download</button>
+  
+    <button  class="button" id="next">
+next
+    </button>
+
+
+  </div>
+</nav>
+
+
+<div id="image-container">
+  <img id="image" src="./images/stories/1.png" alt="Current Image">
+
+<br>
+
+</div>
+<style type="text/css">
+.link{
+text-decoration:none;
+}</style>
+<center><b>🔥🌴❤️For ever Vigro Deep 🔥🌴❤️</b></center>
+<center><a class="link" hfre="#">~ ❤️Lodwick Masete❤️</a></center>
+    <script>
+        var currentImage = 1;
+        var totalImages = 10;
+
+        function changeImage(direction) {
+            currentImage += direction;
+            
+            if (currentImage < 1) {
+                currentImage = totalImages;
+            } else if (currentImage > totalImages) {
+                currentImage = 1;
+            }
+            
+            document.getElementById("image").src = "./images/stories/" + currentImage + ".png";
+        }
+        
+        document.getElementById("prev").addEventListener("click", function() {
+            changeImage(-1);
+        });
+        
+        document.getElementById("next").addEventListener("click", function() {
+            changeImage(1);
+        });
+        
+        
+    </script>
+
+
+<script type="text/javascript">
+var currentImage = 1;
+var totalImages = 10;
+
+function changeImage(direction) {
+    currentImage += direction;
+    
+    if (currentImage < 1) {
+        currentImage = totalImages;
+    } else if (currentImage > totalImages) {
+        currentImage = 1;
+    }
+    
+    document.getElementById("image").src = "./images/stories/" + currentImage + ".png";
+}
+
+document.getElementById("prev").addEventListener("click", function() {
+    changeImage(-1);
+});
+
+document.getElementById("next").addEventListener("click", function() {
+    changeImage(1);
+});
+
+document.getElementById("download").addEventListener("click", function() {
+    var link = document.createElement('a');
+    link.href = document.getElementById("image").src;
+    link.download = "image.png";
+    link.click();
+});
+
+</script>
+</html>
