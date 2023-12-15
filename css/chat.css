@@ -1,0 +1,123 @@
+    .hide{
+    display:none;
+    }
+
+    #chat-container {
+    width: auto;
+    height:400px;/* Set a fixed height for the chat container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: red;
+    }
+    
+    .message.sent {
+    border-radius: 1.125rem 1.125rem 0 1.125rem;
+    color: black;
+    box-sizing: border-box;
+    background: #FFF;
+    min-height: 2.25rem;
+    width: fit-content;
+    max-width: 66%;
+    background-color: gold;
+    padding: 5px;
+    margin: 1rem 1rem 1rem auto;
+    }
+    
+    .message.received {         
+        border-radius: 1.125rem 1.125rem 0 1.125rem;
+        background-color: black;
+        color: white;
+        box-sizing: border-box;
+        padding: 0.5rem 1rem;
+        margin: 1rem;
+        border-radius: 1.125rem 1.125rem 1.125rem 0;
+        min-height: 2.25rem;
+        width: fit-content;
+        max-width: 66%;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.075), 0rem 1rem 1rem -1rem rgba(0, 0, 0, 0.1);
+     }
+
+    
+    .typing {
+        font-style: italic;
+        color: gray;
+    }
+    
+    
+    .typing {
+    background-color: #fcfcfc;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 5px 10px;
+    }
+    .typing i {
+    background-color: #8f8880;
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    margin-right: 3px;
+    width: 8px;
+    }
+    .typing .a {
+    animation: bounce 1s 0s infinite ease-in;
+    }
+    .typing .b {
+    animation: bounce 1s 0.25s infinite ease-in;
+    }
+    .typing .c {
+    animation: bounce 1s 0.5s infinite ease-in;
+    margin: 0;
+    }
+    @keyframes bounce {
+    0% {
+    opacity: 0.75;
+    transform: scale(0.5);
+    }
+    50% {
+    opacity: 1;
+    transform: scale(1);
+    }
+    67% {
+    opacity: 0.75;
+    transform: scale(0.5);
+    }
+    100% {
+    opacity: 0.75;
+    transform: scale(0.5);
+    }
+    }
+    
+    .button {
+    border:1px solid blue;
+    color:blue;
+    width:30%;
+    cursor: pointer;
+    padding:5px;
+    margin:5px;            
+    }
+    
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        margin: 5px 0;
+    }
+
+    #user-input {
+     border-radius:5px;
+    }
+
+
+    #us6er-input:disabled,#send-button:disabled {
+    display:none;
+    }
+
+
+    #chat-log {
+        flex:1; /* Allow the chat log to take up available space and scroll */
+        overflow-y: auto;
+
+    }
