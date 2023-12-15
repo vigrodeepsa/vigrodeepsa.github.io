@@ -1,0 +1,1345 @@
+<!doctype html>
+<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Lodwick Masete and Bootstrap contributors">
+    <title>HOVDSA Pro Version</title>
+    <link rel="icon" href="./images/stories/3.png" type="image/gif" /> 
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navbar-top-fixed.css" >
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+   
+ <style type="text/css">
+ @font-face {
+ src: url("./fonts/Caveat-VariableFont_wght.ttf") format("truetype"),
+ url("./fonts/caveat/static/Caveat-Regular.ttf") format("woff2");
+ font-family: 'myfont';
+ font-style: normal;
+ font-weight: normal ;}
+ font{
+ font-family: "myfont",Sans-Serif;
+ }
+ 
+ </style>
+    <!---Zoomed image in the chat--->
+    <style>
+    .zoomed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .zoomed img {
+    max-width: 90%;
+    max-height: 90%;
+    }
+    
+    .unzoom-btn {
+    position: absolute;
+    top: 10px;
+    left:10px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    color:black;
+    }
+    
+    .download-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration:none;
+    }
+    .blue{
+   color:blue;
+   text-decoration:none;
+   
+    }
+    .grey{
+       color:green; 
+    }
+    </style>
+    <!---Zoomed image in the chat--->
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+
+
+  </head>
+  <body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+<center><h2 class="navbar-brand"><font>House Of Vigro Deep SA Pro 🌴🎄🌴</font></h2></center>
+
+
+    <div class="navbar-toggler" type="button">
+      <a href="socials.html"><img class="right" src="./images/stories/3.png"  class="navbar-toggler" width="35" height="35" alt="Vigro_deep_Logo"></a>
+    </div>
+    
+
+    <menu class="menu">
+    
+
+<button class="menu__item active" style="--bgColorItem: green;"  onclick="openPage('Home', this,)" id="defaultOpen" >
+  <svg class="icon" viewBox="0 0 24 24">
+<path  d="M5.1,3.9h13.9c0.6,0,1.2,0.5,1.2,1.2v13.9c0,0.6-0.5,1.2-1.2,1.2H5.1c-0.6,0-1.2-0.5-1.2-1.2V5.1
+  C3.9,4.4,4.4,3.9,5.1,3.9z"/>
+<path  d="M4.2,9.3h15.6"/>
+<path  d="M9.1,9.5v10.3"/>
+  </svg>
+</button>
+
+<button class="menu__item" style="--bgColorItem: yellow;" onclick="openPage('albums', this,)">
+  <svg class="icon" viewBox="0 0 24 24">
+  <path  d="M3.4,11.9l8.8,4.4l8.4-4.4"/>
+  <path  d="M3.4,16.2l8.8,4.5l8.4-4.5"/>
+  <path  d="M3.7,7.8l8.6-4.5l8,4.5l-8,4.3L3.7,7.8z"/>
+  </svg>
+</button>
+
+<button class="menu__item" style="--bgColorItem: blue;" onclick="openPage('singles', this,)"> 
+<svg class="icon" viewBox="0 0 24 24">
+  <path  d="M6.7,4.8h10.7c0.3,0,0.6,0.2,0.7,0.5l2.8,7.3c0,0.1,0,0.2,0,0.3v5.6c0,0.4-0.4,0.8-0.8,0.8H3.8
+  C3.4,19.3,3,19,3,18.5v-5.6c0-0.1,0-0.2,0.1-0.3L6,5.3C6.1,5,6.4,4.8,6.7,4.8z"/>
+  <path  d="M3.4,12.9H8l1.6,2.8h4.9l1.5-2.8h4.6"/>
+</svg>
+</button>
+
+<a href="#">
+<button class="menu__item" style="--bgColorItem: red;" onclick="openPage('gallery', this,)">
+  <svg class="icon" viewBox="0 0 24 24" >
+    <path  d="M5.1,3.9h13.9c0.6,0,1.2,0.5,1.2,1.2v13.9c0,0.6-0.5,1.2-1.2,1.2H5.1c-0.6,0-1.2-0.5-1.2-1.2V5.1
+      C3.9,4.4,4.4,3.9,5.1,3.9z"/>
+    <path  d="M5.5,20l9.9-9.9l4.7,4.7"/>
+    <path  d="M10.4,8.8c0,0.9-0.7,1.6-1.6,1.6c-0.9,0-1.6-0.7-1.6-1.6C7.3,8,8,7.3,8.9,7.3C9.7,7.3,10.4,8,10.4,8.8z"/>
+  </svg>
+</button>
+</a>
+    
+    <div class="menu__border"></div>
+    
+    </menu>
+   
+    <div class="svg-container">
+    <svg viewBox="0 0 202.9 45.5" >
+    <clipPath id="menu" clipPathUnits="objectBoundingBox" transform="scale(0.0049285362247413 0.021978021978022)">
+    <path  d="M6.7,45.5c5.7,0.1,14.1-0.4,23.3-4c5.7-2.3,9.9-5,18.1-10.5c10.7-7.1,11.8-9.2,20.6-14.3c5-2.9,9.2-5.2,15.2-7
+    c7.1-2.1,13.3-2.3,17.6-2.1c4.2-0.2,10.5,0.1,17.6,2.1c6.1,1.8,10.2,4.1,15.2,7c8.8,5,9.9,7.1,20.6,14.3c8.3,5.5,12.4,8.2,18.1,10.5
+    c9.2,3.6,17.6,4.2,23.3,4H6.7z"/>
+    </clipPath>
+    </svg>
+    </div>
+
+    
+    
+  </div>
+</nav>
+<div class="p-3 my-4">
+
+
+<div class="right">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-ad" viewBox="0 0 16 16">
+<path d="m3.7 11 .47-1.542h2.004L6.644 11h1.261L5.901 5.001H4.513L2.5 11h1.2zm1.503-4.852.734 2.426H4.416l.734-2.426h.053zm4.759.128c-1.059 0-1.753.765-1.753 2.043v.695c0 1.279.685 2.043 1.74 2.043.677 0 1.222-.33 1.367-.804h.057V11h1.138V4.685h-1.16v2.36h-.053c-.18-.475-.68-.77-1.336-.77zm.387.923c.58 0 1.002.44 1.002 1.138v.602c0 .76-.396 1.2-.984 1.2-.598 0-.972-.449-.972-1.248v-.453c0-.795.37-1.24.954-1.24z"/>
+<path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+</svg>
+
+<b>Ads </b></b> This is an ad free version
+
+</div>
+
+<style type="text/css">
+.storie{
+border:3px solid black;
+width:auto;
+padding:5px;
+width:100%;
+}
+
+.fixed{
+position:fixed;
+right:10px;
+bottom:10px;
+}
+
+</style>
+
+
+<style>
+
+    #user-input{
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    .sendMessage-btn{
+
+        padding: 10px;
+        background-color:#ccf;
+    }
+
+</style>
+
+
+<a class="link" href="https://vigrodeepsa.github.io">
+<div id="Home" class="tabcontent">
+  <h3>
+  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+</a>  
+  </svg>stories</h3>
+
+<button type="button" class="btn btn-primary fixed" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen" hidden>
+<newMsg class="red">+1</newMsg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right" viewBox="0 0 16 16">
+  <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
+</svg>
+
+</button>
+<div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title h4" id="exampleModalFullscreenLabel">Vigro Deep Sa Bot</h6> version 1.0
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body tooltip-demo">
+
+    <main id="chat-log">
+<center><button id="resetConv" class="resetConv" onclick="resetConversation()" type="button"  data-bs-toggle="tooltip" data-bs-html="true" title="Conversation Deleted">Reset Conversation</button></center>
+     <div class="message received" >Hello There  👋 👋 👋 !
+
+     </div>
+
+<style type="text/css">
+.resetConv{
+display:block;
+}
+
+.newMsg{
+background-color:black;
+border-radius:50%;
+}
+</style>     
+    </main>
+    <!---Zoomed image in the chat start--->     
+<div class="zoomed-container" id="xx">
+<div class="zoomed">
+<img id="zoomed-img" src="" alt="">
+<a id="download-btn" class="download-btn" href="" download>Download</a>
+<b class="unzoom-btn" onclick="unzoomImage()">X</b> 
+</div>
+</div>
+<!---Zoomed image in the chat End--->     
+ <div id="typing-indicator"><p class="typing"><i class="a"></i><i class="b"></i><i class="c"></i></span></p></div>
+      </div>
+      <div class="modal-footer">
+      
+<textarea id="user-input"  placeholder="Chat..."></textarea>
+
+<button class="sendMessage-btn" onclick="sendMessage()">
+send
+</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<button onclick="resetConversation()" hidden>Reset Conversation</button>
+
+<div id="lod" onclick="copyText(this)">
+</div>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Welcome To House Of Vigro Deep SA pro</h1>
+        <p class="lead text-muted">On This Version,We focus on events and stories for 2024.
+        & before cristmass i will upload the chatbot on this website</p>
+        
+        <p>
+
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div>
+
+    <div class="toast fixed" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"/></svg>
+
+        <strong class="me-auto">HOVDSA Daily Motivational Quotes</strong>
+        <small class="text-muted">16 december</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" onclick="copyText(this)">
+<b>The mission is to never give up no matter where you are in life each day is like rocket ship we all know one day it be dark then the next day be different like gold</b>
+      </div>
+    </div>
+    </div>
+
+
+<style type="text/css">
+.share,#share-3-info{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+#details-3,#details-2,#details-1{
+background-color:white;
+padding:5px;
+}
+</style>
+<!----3---->
+<div id="share-3-info" class="share">
+    <div id="details-3">
+        <h2>Share</h2>
+<p>
+        <a href="vigrodeepsa.github.io/share/story3.html">vigrodeepsa.github.io/share/story3.html</a>
+      </p> <br> 
+        <button class="btn btn-outline-success w-100" onclick="closeShare()" id="copy-btn">Copy</button>
+    </div>
+</div>
+<!----2---->
+<div id="share-2-info" class="share">
+    <div id="details-2">
+        <h2>Share</h2>
+<p>
+        <a href="vigrodeepsa.github.io/share/story2.html">vigrodeepsa.github.io/share/story2.html</a>
+      </p> <br> 
+        <button class="btn btn-outline-success w-100" onclick="closeShare()" id="copy-btn">Copy</button>
+    </div>
+</div>
+<!----1---->
+<div id="share-1-info" class="share">
+    <div id="details-1">
+        <h2>Share</h2>
+<p>
+        <a href="vigrodeepsa.github.io/share/story1.html">vigrodeepsa.github.io/share/story1.html</a>
+      </p> <br> 
+        <button class="btn btn-outline-success w-100" onclick="closeShare()" id="copy-btn">Copy</button>
+    </div>
+</div>
+<!----new year ---->
+
+<h4> <center>New Year CountDown</center></h4>
+
+            <div class="timer">
+                <b class="btn btn-danger"  id="days">0</b>
+                <span>Days</span>
+
+
+                <b class="btn btn-secondary"  id="hours">0</b>
+                <span>Hours</span>
+
+
+                <b class="btn btn-warning" id="minutes">0</b>
+                <span>Minutes</span>
+
+
+                <b class="btn btn-info" id="seconds">0</b>
+                <span>Seconds</span>
+
+              </div>
+       Hover it or click it ^^^       
+<style type="text/css">
+
+.timer{
+font-size:1.2em;
+padding:10px;
+background-color:black;
+color:white;
+border:2px solid red;
+transition:2s ease-in-out;
+}
+
+.timer:hover{
+
+font-size:2.2em;
+width:100%;
+height:100%;
+padding:20px;
+background-color:black;
+color:white;
+border:2px solid green;
+transition:2s ease-in-out;
+background-image: url(./images/christmas.jpg);
+}
+.text-center:hover{
+background-image: url(./images/christmas.jpg);
+}
+</style>
+    
+
+    <script>
+    const newYear = "1 Jan 2024"
+    const timerDays = document.querySelector("#days");
+    const timerHours = document.querySelector("#hours");
+    const timerMinutes = document.querySelector("#minutes");
+    const timerSeconds = document.querySelector("#seconds");
+    
+    function christmasCountdown() {
+    const newYearDate = new Date(newYear);
+    const nowDate = new Date();
+    const countdown = (newYearDate - nowDate);
+    
+    // Values of timer
+    const seconds = Math.floor((countdown / 1000) % 60);
+    const minutes = Math.floor((countdown / 1000 / 60) % 60);
+    const hours = Math.floor((countdown / 1000 / 60 / 60) % 24);
+    const days = Math.floor(countdown / 1000 / 60 / 60 / 24);
+    
+    // Function to add leading zero if necessary
+    function addLeadingZero(value) {
+    return value < 10 ? `0${value}` : value.toString();
+    }
+    
+    // Add leading zeros to the variables
+    const formattedSeconds = addLeadingZero(seconds);
+    const formattedMinutes = addLeadingZero(minutes);
+    const formattedHours = addLeadingZero(hours);
+    const formattedDays = addLeadingZero(days);
+    
+    // Timer display
+    timerDays.innerText = formattedDays;
+    timerHours.innerText = formattedHours;
+    timerMinutes.innerText = formattedMinutes;
+    timerSeconds.innerText = formattedSeconds;
+    
+    console.log(days, hours, minutes, seconds);
+    
+    }
+    
+    christmasCountdown();
+    
+    setInterval(christmasCountdown, 1000);
+    </script>
+    <!--- new year end--->
+
+<div class="storie" hidden>
+
+    <div class="row row-cols-1">
+    <div class="col">
+    <div id="image3">
+      <img src="./images/stories/3.png" onclick="zoomImage('./images/stories/3.png')" width="100%">
+
+    </div>
+</div>
+    </div>
+
+
+
+
+  <small class="text-muted">00:00 |01  January 2024</small> |  
+  <small class="text-muted"> 13 190 Views</small> | 
+  <small class="text-muted">9 167 Downloads</small>
+<br>
+
+<b>New Squad</b>  
+
+<p><b id="tt">results</b>
+Vigro Deep & his monday's cool events Are creating History.
+more than 25% of most Popular South African Amapiano genre Producers & Vocalists
+ were booked at <b>LEASHMA LOUNGE</b> in the past +10 Events of Monday's Cool including As of 
+ Today.
+</p>    
+
+
+
+ <div class="btn">
+
+   <b type="button" class="btn btn btn-outline-secondary" id="like-3">👍 <reaction id="thumb-3"></reaction></b>
+   
+   <b type="button" class="btn btn btn-outline-secondary" id="love-3">♥️ <reaction id="heart-3"></reaction></b>
+
+ </div>
+ 
+   <center id="share-3" onclick="share3()" type="button" class="btn  btn-outline-success w-100 btn-lg" >
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+  <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+</svg>
+   </center>
+</div>
+ <hr>
+
+ <div class="storie" hidden>
+ 
+ <div class="row row-cols-1">
+ <div class="col">
+ <div id="image2">
+ <img src="./images/stories/2.png" width="100%">
+ 
+ </div>
+ </div>
+ </div>
+ 
+ 
+ <small class="text-muted">01 January 2024</small> |  
+ <small class="text-muted"> 8 500 Views</small> | 
+ <small class="text-muted">7 244Downloads</small>
+ <br>
+ 
+ <b>New Squad</b>  
+ 
+ <p>
+ Vigro Deep & his monday's cool events Are creating History.
+ more than 25% of most Popular South African Amapiano genre Producers & Vocalists
+ were booked at <b>LEASHMA LOUNGE</b> in the past +10 Events of Monday's Cool including As of 
+ Today.
+ </p>    
+ 
+
+ 
+ <div class="btn">
+ <b type="button" class="btn btn btn-outline-secondary" id="like-2">👍 <reaction id="thumb-2"></reaction></b>
+ 
+ <b type="button" class="btn btn btn-outline-secondary" id="love-2">♥️ <reaction id="heart-2"></reaction></b>
+ </div>
+    <center id="share-2" onclick="share2()" type="button" class="btn  btn-outline-success w-100 btn-lg" >
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+  <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+</svg>
+    </center>
+ </div>
+ 
+ <hr>
+ 
+ 
+<div class="storie" hidden>
+
+    <div class="row row-cols-1">
+    <div class="col">
+    <div id="image1">
+      <img src="./images/stories/1.png" width="100%">
+
+    </div>
+</div>
+    </div>
+    
+
+  <small class="text-muted">02 October 2023</small> |  
+  <small class="text-muted"> 1 100 Views</small> | 
+  <small class="text-muted">867 Downloads</small>
+<br>
+
+<b>New Squad</b>  
+
+<p>
+Vigro Deep & his monday's cool events Are creating History.
+more than 25% of most Popular South African Amapiano genre Producers & Vocalists
+ were booked at <b>LEASHMA LOUNGE</b> in the past +10 Events of Monday's Cool including As of 
+ Today.
+</p>    
+
+
+ 
+ <div class="btn">
+   <b type="button" class="btn btn btn-outline-secondary" id="like-1">👍 <reaction id="thumb-1"></reaction></b>
+   
+   <b type="button" class="btn btn btn-outline-secondary" id="love-1">♥️ <reaction id="heart-1"></reaction></b>
+ </div>
+<center id="share-1" onclick="share1()" type="button" class="btn  btn-outline-success w-100 btn-lg" >
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+  <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+</svg>
+</center>
+
+ </div>
+
+
+
+
+   </div>
+
+        <style>
+        .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        pointer-events: none;
+        }
+
+        .overlay img {
+        max-width: 100px;
+        max-height: 100px;
+        }
+        </style>
+
+        <script>
+        // Function to show overlay on image
+        function showOverlay(imageId, gif1, gif2, text1, text2) {
+        var image = document.getElementById(imageId).getElementsByTagName("img")[0];
+        var overlay = document.createElement("div");
+        overlay.className = "overlay";
+        
+        var gifElement = document.createElement("img");
+        gifElement.src = gif1;
+        
+        var textElement = document.createElement("p");
+        textElement.textContent = text1;
+        
+        overlay.appendChild(gifElement);
+        overlay.appendChild(textElement);
+        
+        image.parentNode.insertBefore(overlay, image.nextSibling);
+        
+        setTimeout(function() {
+        overlay.remove();
+        image.style.opacity = 1;
+        }, 3000);
+        
+        image.style.opacity = 0.5;
+        }
+        
+        // Image 1 Button 1 click event
+        document.getElementById("like-1").addEventListener("click", function() {
+        showOverlay("image1", "./icons/like-love/like.gif", "like 1", "like 1");
+        });
+        
+        // Image 1 Button 2 click event
+        document.getElementById("love-1").addEventListener("click", function() {
+        showOverlay("image1", "./icons/like-love/love.gif", "love 1", "love 1");
+        });
+        
+        // Image 2 Button 1 click event
+        document.getElementById("like-2").addEventListener("click", function() {
+        showOverlay("image2", "./icons/like-love/like.gif", "like 2", "like 2");
+        });
+        
+        // Image 2 Button 2 click event
+        document.getElementById("love-2").addEventListener("click", function() {
+        showOverlay("image2", "./icons/like-love/love.gif", "love 2", "love 2");
+        });
+        
+        // Image 3 Button 1 click event
+        document.getElementById("like-3").addEventListener("click", function() {
+        showOverlay("image3", "./icons/like-love/like.gif", "like 3", "like 3");
+        });
+        
+        // Image 3 Button 2 click event
+        document.getElementById("love-3").addEventListener("click", function() {
+        showOverlay("image3", "./icons/like-love/love.gif", "love 3", "love 3");
+        });
+        
+        </script>
+
+
+
+
+
+<div id="albums" class="tabcontent">
+  <h3>albums</h3>
+<center>
+<b>Loading Albums</b>
+<br>
+<div class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+</center>
+<i>this may take longer</i>
+</div>
+
+<div id="singles" class="tabcontent">
+  <h3>singles</h3>
+  <p>Single Tracks or releases will be shown here.</p>
+  
+  
+  <div class="list-group">
+  
+   <div class="single-15">
+  <single data-bs-target="#collapse-single-15" data-bs-toggle="collapse" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">It don't Matter</h6>
+  <p class="mb-0 opacity-75">Vigro Deep ft reekado banks</p>
+      
+    </div>
+  <small class="opacity-50 text-nowrap">04:35</small>
+  </div>
+  </single>
+    
+    <div id="collapse-single-15" class="accordion-collapse collapse" >
+    <div class="accordion-body">
+    <audio id="audio15" src="./singles/track15.mp3" controls></audio>
+    </div>
+    </div>
+   </div>
+    
+  <br>
+    <div class="single-14"> 
+  <single data-bs-target="#collapse-single-14" data-bs-toggle="collapse" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/soundcheck2.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Soundcheck</h6>
+  <p class="mb-0 opacity-75">Vigro Deep</p>
+  
+
+    
+  </div>
+  <small class="opacity-50 text-nowrap">06:45</small>
+  </div>
+  
+
+  </single>
+  
+  <div id="collapse-single-14" class="accordion-collapse collapse" >
+    <div class="accordion-body">
+  <audio id="audio14" src="./singles/track14.mp3" controls></audio>
+    </div>
+   </div>
+   </div>
+   
+  <br>
+  
+   <div class="single-13">
+  <single id="playAudio13Button" data-bs-target="#collapse-single-13" data-bs-toggle="collapse"  class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Ukphila</h6>
+  <p class="mb-0 opacity-75">Vigro Deep & Uncle Waffles</p>
+  
+
+    
+  </div>
+  <small class="opacity-50 text-nowrap">06:33</small>
+  </div>
+  </single>
+  
+  
+  <div id="collapse-single-13" class="accordion-collapse collapse" >
+    <div class="accordion-body">
+  <audio id="audio13" src="./singles/track13.mp3" controls></audio>
+    </div>
+  </div>
+  </div>
+  
+  <br>
+  
+   
+    <div class="single-12">
+    
+  <single id="playAudio12Button" data-bs-target="#collapse-single-12" data-bs-toggle="collapse"  class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../images/album_covers/4.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Pitori To ibiza(My House My Rules)</h6>
+  <p class="mb-0 opacity-75">Vigro Deep ft Mj</p>
+ 
+
+   
+   
+   </div>
+  <small class="opacity-50 text-nowrap">05:56</small>
+  </div>
+  </single>
+  
+  <div id="collapse-single-12" class="accordion-collapse collapse" >
+  <div class="accordion-body">
+  <audio id="audio12" src="./singles/track12.mp3" controls></audio>
+  </div>
+  </div>
+  </div>
+  
+  <br>
+  
+   <div class="single-11">
+  <single id="playAudio11Button" data-bs-target="#collapse-single-11" data-bs-toggle="collapse" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Maba Jabulabantu</h6>
+  <p class="mb-0 opacity-75">Vigro Deep ft Murumba pitch & Lady du</p>
+  
+
+    
+  </div>
+  <small class="opacity-50 text-nowrap">07:13</small>
+  </div>
+  </single>
+  
+  <div id="collapse-single-11" class="accordion-collapse collapse" >
+    <div class="accordion-body">
+  <audio id="audio11" src="./singles/track11.mp3" controls></audio>
+  </div>
+  </div>
+  </div>
+  <br>
+  
+   <div class="single-10">
+  <single id="playAudio10Button" data-bs-target="#collapse-single-10" data-bs-toggle="collapse"  class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Need to Be home</h6>
+  <p class="mb-0 opacity-75">Vigro Deep ft Kymolic</p>
+  
+
+    
+    </div>
+  <small class="opacity-50 text-nowrap">07:27</small>
+  </div>
+  </single>
+  
+  <div id="collapse-single-10" class="accordion-collapse collapse" >
+    <div class="accordion-body">
+  <audio id="audio10" src="./singles/track10.mp3" controls></audio>
+    </div>
+  </div>
+  </div>
+  <br>
+  
+   <div class="single-9">
+   
+  <single id="playAudio9Button" data-bs-target="#collapse-single-9" data-bs-toggle="collapse"  class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover2.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">We Wa Wa We Wa (Ama international)</h6>
+  <p class="mb-0 opacity-75">Vigro Deep</p>
+  
+
+    
+    </div>
+  <small class="opacity-50 text-nowrap">07:25</small>
+  </div>
+  </single>
+  
+  <div id="collapse-single-9" class="accordion-collapse collapse" >
+    <div class="accordion-body">
+  <audio id="audio9" src="./singles/track9.mp3" controls></audio>
+  </div>
+  </div>   
+  </div> 
+  <br>
+  
+   <div class="single-8">
+  <single id="playAudio8Button" data-bs-target="#collapse-single-8" data-bs-toggle="collapse" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover2.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Vula Vala</h6>
+  <p class="mb-0 opacity-75">Vigro Deep ft Nokwazi</p>
+  
+
+  </div>
+  <small class="opacity-50 text-nowrap">06:13</small>
+  </div>
+  </single>
+  
+  <div id="collapse-single-8" class="accordion-collapse collapse" >
+    <div class="accordion-body">
+  <audio id="audio8" src="./singles/track8.mp3" controls></audio>
+  </div>
+  </div>
+  </div>
+    
+  <br>
+  
+   <div class="single-7">
+  <single id="playAudio7Button" data-bs-target="#collapse-single-7" data-bs-toggle="collapse" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/smosh_kay.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Come To Me</h6>
+  <p class="mb-0 opacity-75">Vigro Deep</p>
+    
+
+    </div>
+  <small class="opacity-50 text-nowrap">unconfirmed</small>
+  </div>
+  </single>
+  
+  <div id="collapse-single-7" class="accordion-collapse collapse" >
+  <div class="accordion-body">
+    <audio id="audio7" src="./singles/track7.mp3" controls></audio>
+  </div>
+    </div>
+  </div>
+  
+  <br>
+  
+   <div class="single-6">
+  <single id="playAudio6Button" data-bs-target="#collapse-single-6" data-bs-toggle="collapse" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover3.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Kamogelo</h6>
+  <p class="mb-0 opacity-75">Vigro Deep</p>
+  
+
+  </div>
+  <small class="opacity-50 text-nowrap">unconfirmed</small>
+  </div>
+  </single>
+  
+  <div id="collapse-single-6" class="accordion-collapse collapse" >
+    <div class="accordion-body">
+  <audio id="audio6" src="./singles/track6.mp3" controls></audio>
+    </div>
+  </div>
+  </div>  
+  <br>
+  
+ <div class="single-fiveone">
+  
+  <single id="playAudiofiveoneButton" data-bs-target="#collapse-single-fiveone" data-bs-toggle="collapse" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover3.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Abashwe (Pheli Bass Mix)</h6>
+  <p class="mb-0 opacity-75">Vigro Deep</p>
+  
+
+    
+  
+  </div>
+  <small class="opacity-50 text-nowrap">unconfirmed</small>
+  </div>
+  </single>
+  
+  <div id="collapse-single-fiveone" class="accordion-collapse collapse" >
+    <div class="accordion-body">
+  <audio id="audiofiveone" src="./singles/trackfiveone.mp3" controls></audio>
+    </div>
+    </div>
+</div>
+
+
+<br>
+
+   <div class="single-5">
+  <single id="playAudio5Button" data-bs-target="#collapse-single-5" data-bs-toggle="collapse"  class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover3.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Celebration Day </h6>
+  <p class="mb-0 opacity-75">Vigro Deep ft sdala</p>
+  
+
+  </div>
+  </div>
+  <small class="opacity-50 text-nowrap">07:55</small>
+
+  
+
+  
+  </single>
+  <div id="collapse-single-5" class="accordion-collapse collapse" >
+    <div class="accordion-body">
+  <audio id="audio5" src="./singles/track5.mp3" controls></audio>
+    </div>
+  </div>
+  
+</div>
+  
+  <br>
+  
+     <div class="single-4">
+  <single id="playAudio4Button" data-bs-target="#collapse-single-4" data-bs-toggle="collapse" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover3.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Half Moon</h6>
+  <p class="mb-0 opacity-75">Vigro Deep ft king Jazz</p>
+  
+
+    </div>
+  </div>
+  <small class="opacity-50 text-nowrap">unconfirmed</small>
+
+  
+
+  </single>
+
+<div id="collapse-single-4" class="accordion-collapse collapse" >
+  <div class="accordion-body">
+<audio id="audio4" src="./singles/track4.mp3" controls></audio>
+  </div>
+ </div>
+ </div>
+  
+  
+  <br>
+  
+   <div class="single-3">
+  <single id="playAudio3Button" data-bs-target="#collapse-single-3" data-bs-toggle="collapse"  class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover3.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Dimakatso</h6>
+  <p class="mb-0 opacity-75">Vigro Deep</p>
+  
+
+  </div>
+  </div>
+  <small class="opacity-50 text-nowrap">06:55</small>
+
+  
+
+  
+  </single>
+  
+<div id="collapse-single-3" class="accordion-collapse collapse" >
+<div class="accordion-body">
+<audio id="audio3" src="./singles/track3.mp3" controls></audio>
+</div>
+</div>
+</div> 
+
+ <br>
+  
+  <div class="single-2">
+  <single id="playAudio2Button" data-bs-target="#collapse-single-2" data-bs-toggle="collapse" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover3.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0"> Before I fall </h6>
+  <p class="mb-0 opacity-75">Vigro Deep</p>
+ 
+ </div>
+ </div> 
+ 
+
+  
+
+  <small class="opacity-50 text-nowrap">unconfirmed</small>
+
+
+  
+  </single>
+
+<div id="collapse-single-2" class="accordion-collapse collapse" >
+<div class="accordion-body">
+
+  <audio id="audio2" src="./singles/track2.mp3" controls></audio>
+</div>
+</div>
+</div>
+
+
+  <br>
+  
+<div class="single-1">
+  <single id="playAudio1Button" data-bs-target="#collapse-single-1" data-bs-toggle="collapse"  aria-expanded="false" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <img src="../stream/img/cover3.png" alt="latest single" width="50" height="50" class="rounded-circle flex-shrink-0">
+  <div class="d-flex gap-2 w-100 justify-content-between">
+  <div>
+  <h6 class="mb-0">Ghost Producer</h6>
+  <p class="mb-0 opacity-75">Vigro Deep</p>
+  
+  </div>
+  </div>
+  
+  <small class="opacity-50 text-nowrap">07:34</small>
+
+         
+
+
+            </single>
+            <div id="collapse-single-1" class="accordion-collapse collapse" >
+            
+            <div class="accordion-body">
+            <audio id="audio1" src="./singles/track.mp3" controls></audio>
+            </div>
+            </div>
+ </div>
+
+</div>
+
+  </div>
+  <script type="text/javascript">
+  
+  // Function to stop playing all audios except the provided one
+  function stopAllAudiosExcept(audio) {
+  const audios = document.querySelectorAll('audio');
+  audios.forEach(function(a) {
+  if (a !== audio) {
+  a.pause();
+  a.currentTime = 0;
+  }
+  });
+  }
+  
+  // Event listeners for the play buttons
+  document.getElementById('playAudio1Button').addEventListener('click', function() {
+  const audio1 = document.getElementById('audio1');
+  stopAllAudiosExcept(audio1);
+  audio1.play();
+  });
+  
+  document.getElementById('playAudio2Button').addEventListener('click', function() {
+  const audio2 = document.getElementById('audio2');
+  stopAllAudiosExcept(audio2);
+  audio2.play();
+  });
+  
+  document.getElementById('playAudio3Button').addEventListener('click', function() {
+  const audio3 = document.getElementById('audio3');
+  stopAllAudiosExcept(audio3);
+  audio3.play();
+  });
+  
+  document.getElementById('playAudio4Button').addEventListener('click', function() {
+  const audio4 = document.getElementById('audio4');
+  stopAllAudiosExcept(audio4);
+  audio4.play();
+  });
+  
+  document.getElementById('playAudio5Button').addEventListener('click', function() {
+  const audio5 = document.getElementById('audio5');
+  stopAllAudiosExcept(audio5);
+  audio5.play();
+  });
+  
+  document.getElementById('playAudiofiveoneButton').addEventListener('click', function() {
+  const audiofiveone = document.getElementById('audiofiveone');
+  stopAllAudiosExcept(audiofiveone);
+  audiofiveone.play();
+  });
+  
+  </script>
+  
+</div>
+
+
+</div>
+
+
+
+<div id="gallery" class="tabcontent">
+ <h3>gallery</h3>
+<style>
+.single-1:hover,.single-2:hover,
+.single-3:hover,.single-4:hover,
+.single-5:hover,.single-fiveone:hover,
+.single-6:hover,.single-7:hover,
+.single-8:hover,.single-9:hover,
+.single-10:hover,.single-11:hover,
+.single-12:hover,.single-13:hover,
+.single-14:hover,.single-15:hover
+{
+border:2px solid green;
+}
+
+    #image-container {
+        overflow: hidden;
+    }
+
+    #image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: orange;
+        color: white;
+        border: none;
+        cursor: pointer;
+        left:0;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+
+
+   newMsg{
+   background-color:black;
+   border-radius:50%;
+   }
+</style>
+</head>
+
+<div id="image-container">
+    <img id="image" src="./images/stories/1.png" alt="Vigro Deep's Picture" class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></img>
+</div>
+
+<br>
+
+<a href="gallery.html" class="btn btn-primary my-2">Gallery pro</a>
+
+<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+<div class="navbar-brand" >
+<button class="button" id="prev">
+Previous
+</button>    
+  </div>
+ 
+  <button class="button" id="download">Download</button>
+  
+<button  class="button" id="next">
+next
+</button>
+
+
+  </div>
+</nav>
+
+
+</div>
+
+
+
+  </body>
+</html>
+
+
+
+
+<script>
+    var currentImage = 1;
+    var totalImages = 30;
+
+    function changeImage(direction) {
+        currentImage += direction;
+        
+        if (currentImage < 1) {
+            currentImage = totalImages;
+        } else if (currentImage > totalImages) {
+            currentImage = 1;
+        }
+        
+        document.getElementById("image").src = "./images/stories/" + currentImage + ".png";
+    }
+    
+    document.getElementById("prev").addEventListener("click", function() {
+        changeImage(-1);
+    });
+    
+    document.getElementById("next").addEventListener("click", function() {
+        changeImage(1);
+    });
+    
+    document.getElementById("download").addEventListener("click", function() {
+    var link = document.createElement('a');
+    link.href = document.getElementById("image").src;
+    link.download = "image.png";
+    link.click();
+    });
+    
+    
+</script>
+
+
+ <script src="./js/bootstrap.bundle.min.js"></script>
+ <script  src="./js/image-zooming.js"></script>
+ <script  src="./js/tab-bar.js"></script>
+
+
+<script src="./js/interactions.js"></script>
+<!---for bot place down here bcz at the top the bot isn't responding--->
+<link rel="stylesheet" href="./css/chat.css">
+<script src="./bot-assets/logics.js"></script>
+<script src="./bot-assets/processor.js"></script>
+<!---for bot end--->
+
+<!---reactions--->
+<script src="./js/reactions/jquery.js">
+//jquery required for updating reactions
+</script>
+
+<script src="./js/reactions/storie/1.js">
+//for the first post
+</script>
+<!---reactions end--->
+
+<!---bootstrap javascript--->
+<script src="./js/bootstrap.bundle.min.js"></script>
+<!---bootstrap javascript--->
+
+
+
+<script>
+// it hides the Zoomed image in the chat when page is loaded
+//if you're viewing this and have some alternative Idea send email
+{
+document.getElementById("xx").style.display = "none";
+}
+
+
+</script>
+
+<script type="text/javascript">
+share = '<div class="spinner-border text-dark" role="status">   <span class="visually-hidden">Loading...</span></div>'
+function share3(){
+document.getElementById("share-3").innerHTML = share;
+document.getElementById('share-3-info').style.display = 'flex';
+}
+//2
+function share2(){
+document.getElementById("share-2").innerHTML = share;
+document.getElementById('share-2-info').style.display = 'flex';
+}
+//1
+function share1(){
+document.getElementById("share-1").innerHTML = share;
+document.getElementById('share-1-info').style.display = 'flex';
+}
+function closeShare(){
+document.getElementById("share-3").innerHTML = "shared";
+document.getElementById("share-2").innerHTML = "shared";
+document.getElementById("share-1").innerHTML = "shared";
+document.getElementById('share-3-info').style.display = 'none';
+document.getElementById('share-2-info').style.display = 'none';
+document.getElementById('share-1-info').style.display = 'none';
+}
+</script>
