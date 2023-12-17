@@ -2,15 +2,16 @@
     display:none;
     }
 
+
     #chat-container {
     width: auto;
     height:400px;/* Set a fixed height for the chat container */
-    display: flex;
+  display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: red;
     }
-    
+
     .message.sent {
     border-radius: 1.125rem 1.125rem 0 1.125rem;
     color: black;
@@ -106,18 +107,9 @@
         margin: 5px 0;
     }
 
-    #user-input {
-     border-radius:5px;
-    }
-
-
-    #us6er-input:disabled,#send-button:disabled {
-    display:none;
-    }
-
 
     #chat-log {
         flex:1; /* Allow the chat log to take up available space and scroll */
         overflow-y: auto;
-
+        height:100%;
     }
