@@ -220,7 +220,7 @@ bottom:10px;
 </a>  
   </svg>stories</h3>
 
-<button type="button" class="btn btn-primary fixed" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen" hidden>
+<button type="button" class="btn btn-primary fixed" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen" >
 <newMsg class="red">+1</newMsg>
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right" viewBox="0 0 16 16">
   <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
@@ -265,20 +265,32 @@ border-radius:50%;
  <div id="typing-indicator"><p class="typing"><i class="a"></i><i class="b"></i><i class="c"></i></span></p></div>
       </div>
       <div class="modal-footer">
+      <div class="input-group">
       
-<textarea id="user-input"  placeholder="Chat..."></textarea>
+        <textarea placeholder="Type Message ..." id='user-input' class="form-control" aria-label="With textarea"></textarea>
+         <span onclick="sendMessage()" class="input-group-text btn-success">
+         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="15" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+         <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+         </svg>
+         </span>
+      </div>
+<!----      
+<textarea   placeholder="Chat..."></textarea>
 
-<button class="sendMessage-btn" onclick="sendMessage()">
+<button class="sendMessage-btn" >
 send
 </button>
-
+--->
       </div>
     </div>
   </div>
 </div>
 
 
-<button onclick="resetConversation()" hidden>Reset Conversation</button>
+<button onclick="resetConversation()">Reset Conversation</button>
+<p>
+
+
 
 <div id="lod" onclick="copyText(this)">
 </div>
@@ -303,17 +315,22 @@ send
 
     <div class="toast fixed" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-        <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"/></svg>
+        <img src="./images/stories/2.png" class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"/></img>
 
         <strong class="me-auto">HOVDSA Daily Motivational Quotes</strong>
-        <small class="text-muted">16 december</small>
+        <input type="date" id="postDate" hidden >
+        <small id="post-date" class="text-muted">16 december</small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="toast-body" onclick="copyText(this)">
-<b>The mission is to never give up no matter where you are in life each day is like rocket ship we all know one day it be dark then the next day be different like gold</b>
+<b id="post"></b>
       </div>
     </div>
     </div>
+
+
+
+
 
 
 <style type="text/css">
@@ -357,9 +374,9 @@ padding:5px;
 <!----1---->
 <div id="share-1-info" class="share">
     <div id="details-1">
-        <h2>Share</h2>
+        <h2>Copy & Share this link</h2>
 <p>
-        <a href="vigrodeepsa.github.io/share/story1.html">vigrodeepsa.github.io/share/story1.html</a>
+        <a href="index.html#shebe">vigrodeepsa.github.io/index.html#shebe</a>
       </p> <br> 
         <button class="btn btn-outline-success w-100" onclick="closeShare()" id="copy-btn">Copy</button>
     </div>
@@ -368,7 +385,7 @@ padding:5px;
 
 <h4> <center>New Year CountDown</center></h4>
 
-            <div class="timer">
+            <div class="timer" >
                 <b class="btn btn-danger"  id="days">0</b>
                 <span>Days</span>
 
@@ -407,10 +424,10 @@ background-color:black;
 color:white;
 border:2px solid green;
 transition:2s ease-in-out;
-background-image: url(./images/christmas.jpg);
+
 }
 .text-center:hover{
-background-image: url(./images/christmas.jpg);
+
 }
 </style>
     
@@ -504,7 +521,7 @@ more than 25% of most Popular South African Amapiano genre Producers & Vocalists
 </svg>
    </center>
 </div>
- <hr>
+
 
  <div class="storie" hidden>
  
@@ -546,15 +563,15 @@ more than 25% of most Popular South African Amapiano genre Producers & Vocalists
     </center>
  </div>
  
- <hr>
+
  
  
-<div class="storie" hidden>
+<div id="shebe" class="storie">
 
     <div class="row row-cols-1">
     <div class="col">
     <div id="image1">
-      <img src="./images/stories/1.png" width="100%">
+    <a href="./images/stories/events/shxta_2023.png">  <img src="./images/stories/events/shxta_2023.png" width="100%"></a>
 
     </div>
 </div>
@@ -562,30 +579,29 @@ more than 25% of most Popular South African Amapiano genre Producers & Vocalists
     
 
   <small class="text-muted">02 October 2023</small> |  
-  <small class="text-muted"> 1 100 Views</small> | 
+  <small class="text-muted"> 4.74 k Views</small> | 
   <small class="text-muted">867 Downloads</small>
 <br>
 
-<b>New Squad</b>  
+<b>Topless Monday</b>  
 
 <p>
-Vigro Deep & his monday's cool events Are creating History.
-more than 25% of most Popular South African Amapiano genre Producers & Vocalists
- were booked at <b>LEASHMA LOUNGE</b> in the past +10 Events of Monday's Cool including As of 
- Today.
+Were having one of the most Followed Celebrity from limpopo <b>ShebeShxt</b>
+on mondays'cool .
+at <b>LEASHMA LOUNGE</b> Shxta !!!
 </p>    
 
 
  
  <div class="btn">
-   <b type="button" class="btn btn btn-outline-secondary" id="like-1">👍 <reaction id="thumb-1"></reaction></b>
+   <b type="button" class="btn btn btn-outline-secondary" id="like-1">👍 1.13 k<reaction id="thumb-1"></reaction></b>
    
-   <b type="button" class="btn btn btn-outline-secondary" id="love-1">♥️ <reaction id="heart-1"></reaction></b>
+   <b type="button" class="btn btn btn-outline-secondary" id="love-1">♥️ <reaction id="heart-1">3.52 k</reaction></b>
  </div>
 <center id="share-1" onclick="share1()" type="button" class="btn  btn-outline-success w-100 btn-lg" >
 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
   <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
-</svg>
+</svg> <b> 2</b>
 </center>
 
  </div>
@@ -1297,16 +1313,15 @@ next
 //jquery required for updating reactions
 </script>
 
-<script src="./js/reactions/storie/1.js">
-//for the first post
-</script>
+
 <!---reactions end--->
 
 <!---bootstrap javascript--->
 <script src="./js/bootstrap.bundle.min.js"></script>
 <!---bootstrap javascript--->
 
-
+<script src="./js/motivation.js"></script>
+<script src="./js/motivation-data.js"></script>
 
 <script>
 // it hides the Zoomed image in the chat when page is loaded
