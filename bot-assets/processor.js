@@ -37,7 +37,7 @@ function generateBotResponse(userMessage) {
     const botAnswers = keywordsMatched.map(logic => logic.answers[Math.floor(Math.random() * logic.answers.length)]);
     return botAnswers.map(answer => addEmojis(answer, userMessage)).join('<p>');
   } else {
-    return 'Sorry, I didn\'t understand that,Try asking somethinh else.';
+    return 'Sorry, I didn\'t understand that,Try asking something else.';
   }
 }
 

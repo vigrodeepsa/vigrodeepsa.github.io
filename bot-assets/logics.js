@@ -12,7 +12,7 @@ const botLogics = [
     answers: ['<img onclick="zoomImage(\'./images/stories/3.png\')" src="./images/stories/3.png" width="50px" alt="internet Connection is required to view images">']
   },
   {
-    keywords: ["who is vigro deep", "who is vigro"," tell me about vigro deep","tell me about vigro" ],
+    keywords: ["who's vigro" ,"who is kamohelo", "who is vigro","me about vigro","whos vigro" ],
     answers: [ "Vigro Deep is a renowned South African DJ and record producer known for his contributions to the Amapiano music genre.Vigro Deep's real name is Kamogelo Phetla"]
   },
   {
