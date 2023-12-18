@@ -11,6 +11,57 @@
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <!---bootstrap core css end--->
 
+<!---Zoomed image in the chat--->
+<style>
+.zoomed {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.zoomed img {
+max-width: 100%;
+max-height: 100%;
+}
+
+.unzoom-btn {
+position: absolute;
+top: 10px;
+left:10px;
+padding: 5px 10px;
+background-color: #fff;
+border-radius: 5px;
+cursor: pointer;
+color:black;
+}
+
+.download-btn {
+position: absolute;
+top: 10px;
+right: 10px;
+background-color: #fff;
+padding: 5px 10px;
+border-radius: 5px;
+cursor: pointer;
+text-decoration:none;
+}
+.blue{
+   color:blue;
+   text-decoration:none;
+   
+}
+.grey{
+   color:green; 
+}
+</style>
+<!---Zoomed image in the chat--->
+
 <style>
   .bd-placeholder-img {
     font-size: 1.125rem;
@@ -69,7 +120,7 @@
 Previous
     </button>    
   </div>
-<center><a href="g-zoom.html">Zoom</a></center>     
+     
   <button class="button" id="download">Download</button>
   
     <button  class="button" id="next">
@@ -84,23 +135,29 @@ next
 <div id="image-container">
   <img id="image" src="./images/stories/2024/1.png" alt="Current Image">
 
-<br><br>
+<br>
 
+</div>
+<!---Zoomed image in the chat start--->     
+<div class="zoomed-container" id="xx">
+<div class="zoomed">
+<img id="zoomed-img" src="./images/stories/2024/1.png" alt="">
+<a id="download-btn" class="download-btn" href="" download>Download</a>
+<a href="gallery.html"><b class="unzoom-btn" onclick="unzoomImage()">X</b> </a>
+</div>
+</div>
 <!---Zoomed image in the chat End--->     
 <div id="lo"></div>
 <style type="text/css">
 .link{
 text-decoration:none;
-}
-.g-zoom{
-width:80%;
 }</style>
 <center><b>🔥🌴❤️For ever Vigro Deep 🔥🌴❤️</b></center>
 <center><a class="link" hfre="#">~ ❤️Lodwick Masete❤️</a></center>
 
 <script type="text/javascript">
 var currentImage = 1;
-var totalImages = 10;
+var totalImages = 30;
 
 function changeImage(direction) {
     currentImage += direction;
@@ -112,7 +169,7 @@ function changeImage(direction) {
     }
     
 
-    document.getElementById("image").src = "./images/stories/2024/" + currentImage + ".png";
+    document.getElementById("zoomed-img").src = "./images/stories/2024/" + currentImage + ".png";
 
 
 }
@@ -134,4 +191,32 @@ document.getElementById("download").addEventListener("click", function() {
 
 </script>
 
+
+ <script>
+ 
+ function zoomImage(src) {
+ var zoomedContainer = document.querySelector('.zoomed-container');
+ var zoomedImg = document.getElementById('zoomed-img');
+ 
+ zoomedContainer.style.display = 'flex';
+ zoomedImg.src = src;
+ var zoomedContainer = document.querySelector('.zoomed-container');
+ var zoomedImg = document.getElementById('zoomed-img');
+ var downloadBtn = document.getElementById('download-btn');
+ 
+ downloadBtn.href = src;
+ }
+ //***************
+ {
+ document.getElementById("xhx").style.display = "none";
+ }
+ 
+ function unzoomImage() {
+ var zoomedContainer = document.querySelector('.zoomed-container');
+ var zoomedImg = document.getElementById('zoomed-img');
+ 
+ zoomedContainer.style.display = 'none';
+ zoomedImg.src = '';
+ }
+ </script>
 </html>
