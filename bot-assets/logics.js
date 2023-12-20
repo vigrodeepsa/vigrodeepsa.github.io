@@ -80,7 +80,27 @@ const botLogics = [
   { keywords: ["vigro deep socials", "is vigro deep on social media", "vigro deep tiktok","vigro deep facebook", "vigro deep instagram", "vigro deep twiter"], 
     answers: [ "Vigro Deep is active on social media. You can follow him on platforms like Instagram, Twitter, and Facebook to stay updated on his activities and music releases!" ]
   },
-  {  
+  {
+    keywords: ["17 years old","seventeen years old","17 years ago","age of 17","age of seventeen"],
+    answers: ["At just 17, Vigro Deep became a revered DJ/producer after the widespread success of his seminal hits “Black Power” and “Untold Stories,” which brought electro synths and banging drums to amapiano, and developed his signature sound through his gleefully experimental Baby Boy mixtape series."] 
+  },
+  {
+   keywords: ["instagram videos","instagram photos","instagram pictures","instagram post","instagram posts","many instagram followers","instagram follows","instagram following","following on instagram","followers on instagram","following on instagram"],
+    answers: ["Vigro deep on instagram <br> +727K Followers, +748 Following, +113 Posts ,you can see his videos on his profile or his pictures on the gallery page"]
+  },
+  {
+   keywords: ["positive shift","his love for music","deep finish school","vigro finish school","school dropout","school dropping out","did he drop out","did he dropout"],
+    answers: ["Due to his love for music, he couldn’t concentrate with his school works which led into him dropping out of school when he was in the 10th Grade, this was after there was a positive shift in his career."] 
+  },
+  {
+   keywords: ["deep payed","vigro payed","deep is payed","what's his networth","deep's networth","vigro's networth","deep net worth","deep networth","vigro networth","vigro networth","vigro deep rich","rich is vigro"],
+    answers: ["Vigro Deep’s Net worth has not been fully calculated at the time of the writing . Looking at his show performances, album sales, money made from his Youtube views, Properties and investments owned by him, the DJ/Producer May be sitting on a goldmine at the moment. He is one DJ that is really doing well for himself."] 
+  },
+  {
+   keywords: ["deep is young","vigro is young","deep is still young","vigro is still young","deep young age","deep in the music industry","vigro in the music industry","deep in the industry","vigro in the industry"],
+    answers: ["Vigro Deep is a DJ/producer that has been able to make a huge name for himself, even with the fact that he is a teenager in the industry."] 
+  },   
+  {
     keywords: ["how to book", "vigro deep bookings", "vigro deep booking","booking vigro deep", "book vigro deep", "bookings info"], 
     answers: [ "You can book Vigro Deep for your event by contacting Vigro Deep's agent. Vigro Deep agent will be able to provide you everything you need to hire Vigro Deep including availability and pricing"]
   },
@@ -408,7 +428,7 @@ const botLogics = [
     }, 
     {
     keywords: ["how can i","how to","how do i"],
-    answers:[ "I am sorry,but I can't give instructions right now,but I promise In the next version,this feature will be added."]
+    answers:[ "Instructions to be programed soon.","Instructions to be programed soon.you can ask this question frequently to see if there more possible instructions/tutorials"]
     }, 
     {
     keywords: ["password","login","my account","personal information","my pin","code","otp","account details"],
@@ -428,7 +448,7 @@ const botLogics = [
     }, 
     {
     keywords: ["haha","nice joke","lol","so funny","hahaha"],
-    answers: ["That's was funny 🤣, but it's so sad that a bot like me  cannot laugh,feel or even detect feelings & emotions"]
+    answers: ["🤣😂","🤣😂🤣😂","glad you found tha funny 🤣😂","That's was funny? 🤣😂"]
     }, 
     {
     keywords: ["happy new year","it's new yeah","song of the year","year 2024","new year's eve","new year's"],
@@ -623,8 +643,8 @@ const botLogics = [
      answers: ["Vigro Deep has composed a lot of the most-loved amapiano hits, including Amablesser (featuring Sax), Impilo, and Ke Star, just to name a few" ]
      },
     {
-     keywords: ["what is piano","what is amapiano"],
-     answers: ["Amapiano is a style of house music that emerged in South Africa in 2012. Amapiano is a hybrid of deep house, jazz and lounge music characterized by synths, airy pads and wide basslines.[1] It is distinguished by high pitched piano melodies, Kwaito basslines, low tempo 90s South African house rhythms and percussions from another local subgenre of house known as Bacardi.[2]" ]
+     keywords: ["what's amapiano","about amapiano","what is piano","what is amapiano"],
+     answers: ["Amapiano is a style of house music that emerged in South Africa in 2012. Amapiano is a hybrid of deep house, jazz and lounge music characterized by synths, airy pads and wide basslines.[1] It is distinguished by high pitched piano melodies, Kwaito basslines, low tempo 90s South African house rhythms and percussions from another local subgenre of house known as Bacardi.[2] <p><b>A fact about amapiano</b>:</p> Viral dance challenges have turned burgeoning Amapiano artists into stars overnight. As the genre continues to grow, more and more international artists are beginning to take notice and join the wave. ","Amapiano music is synonymous with the modern-day South African dance and electronic music scenes. These infectious afrobeat grooves have their roots in the Soweto township of Johannesburg, South Africa, also home to the genre’s predecessor: Kwaito music. <p><b>More about amapiano</b>: </p> An eclectic mix of deep house, jazz, afrobeat, hip hop, and soul music, Amapiano is firmly rooted in sounds of the past. At the same time, it steadily pushes toward the future. Over the last three years, the genre has migrated from bedroom studios to clubs around South Africa and now the world. Beyond a mere mixture of genres, Amapiano is a feeling. The sound represents the Soweto township’s heart and soul and extends South African music’s legacy into the modern era." ]
      },
     {
      keywords: ["appreciation to his father","appreciate his father"],
@@ -664,7 +684,51 @@ const botLogics = [
      answers: [ "Euphoria 🌴 Phase 2 is still loading…" ]
      }, 
   ///
-  
+//producer mode start
+   {
+     keywords: ["what is master","what is mastering","what is to master","why do we master","why should we master","supposed to master","have to master","mastering tools","equalization","compression limiting","stereo enhancement","use to master","used to master","used for mastering","define mastering","definition of mastering","define master","tools to master"],
+     answers: ["mastering is the final step of audio post-production. The purpose of mastering is to balance sonic elements of a stereo mix and optimize playback across all systems and media formats. Traditionally, mastering is done using tools like equalization, compression, limiting and stereo enhancement."] 
+    },
+    { 
+     keywords: ["fl studio mixing","mixing in fl studio","mixing tools","how to mix","mixing tips","how to mix","how to mix","mix in fl","mix in studio","static mix"],
+     answers: ["<p>Try this Tip</p>Start by programming the drums with a four-on-the-floor pattern. First, set the tempo to 112 BPM, select a drum kit on the ZR1 Drum Sequencer, and program a four-bar pattern. Then, choose Conga Kit 2 from the Latin Percussion kit and add a kick drum from the Roland Classic Drums kit. Start this pattern with constant sixteenth notes on the shaker and an open hi-hat on the offbeats (third square in each quarter note column).<p>Next, add the congas to create a typical clave pattern found in many Amapiano tracks (2, “a” of 2, and “of” 3, 4). The last thing to add is the 909 kick on every quarter note. This pattern is similar to Kwaito. You can find variations throughout Amapiano music, cementing its connection to its predecessor.</p>","<p><b>Mixing Tips includes<b><p><li>Setting the volumes to get a static mix. This helps you start in a strong position and address any issues in the arrangement and songwriting which might be lacking.</li> <li>Cleaning up the sounds so that they are separated and clear.</li> <li> Adding artistic effects – In this case, a lot of reverb was used but this is not necessary on a lot of sources. This is where you can use saturation (try fruity waveshaper), delay (Fruity Delay 3) or other artistic effects to add character, life and vibe to your song.</li> <p>Lastly</p> Amapiano tracks tend to stay on the slower end of the house music spectrum with tempos ranging between 108-115 BPM.","To begin our exploration into Amapiano music, we must start with the foundation. As with most genres, one of the main defining features of Amapiano is the drums. The tempos, drum sounds, and patterns that make Amapiano music are vital to understanding how to program and create this style of music <p>One more thing</p>Amapiano tracks tend to stay on the slower end of the house music spectrum with tempos ranging between 108-115 BPM & Setting the volumes to get a static mix. This helps you start in a strong position and address any issues in the arrangement and songwriting which might be lacking."]
+    },
+    { 
+     keywords: ["mastering tips","how to master","master using fl studio","master a song","master a track","balance a sound","clipping sounds","bad mastering","master bad sounds","master bad sound","mastering bad sounds","mastering bad sound","bad sounds mastering","mastering loudness","track is loud","mastering loud track","master loud track"],
+     answers: ["<b>Mastering Tips includes</b> <li> Have an aim when mastering and also use this as a final chance to catch any mistakes, like sounds that might be clipping. </li>  </li>Listen for bad sound that might distract from the track, (especially in the low mids). The MIX must be good for a good master. Mastering is not a quick fix for a bad mix.</li><li> LOUDNESS- well this is that final step to mastering, making sure that your track is loud enough to be heard and not that it distorts. Here you are ready to export the track on to any online platform or release.</li>"] 
+     }, 
+    //producer mode end
+    //
+    //premuim producer mode part 2 start
+    {
+     keywords: ["amapiano keyboard","adding keyboard","add keyboard","adding keyboards","adding keyboard","rhodes sounds","electric piano tones","master piano","master keyboard","master keys","mastering keys","mastering keyboards"],
+     answers: ["One of the distinctive qualities of Amapiano music is its sonic mixture of jazz, house, and soul influences. This is most notable in the production’s usage of piano and keyboards. Amapiano means “The Piano” in Zulu. Artists such as Vigro Deep & Kabza De Small have helped bring the piano to the forefront of the genre. They’ve done this by creating tracks with jazz and soul-influenced harmony and using sounds such as Rhodes, vibes, and other electric piano tones. <p>type 'tell me about harmony' to know about harmony.</p> "]
+     },
+    {
+     keywords: ["keyboard and harmony","keyboards and harmony","harmony keys","mastering keys and harmony","harmony mastering keys","about harmony","mastering harmony","using harmony","use harmony","chords progression"],
+     answers: ["Using drum loops, here’s an example of a chord progression that uses 7th chords (1-3-5-7) and chords with upper extensions (9, 11, 13). You can find these in jazz and soul music. - To create the chord progression, use a loop from the Lofi Chilled Keys sample pack available on Zenbeats (Lofi Chilled Keys 18)-. The progression is C minor 9, F dominant 7, Bb major 9, G minor 7, and G dominant 7 b9. <br><br>This progression is common in jazz music, and musicians know it as a 2-5-1 progression. In this example, C minor is the chord that corresponds with the second degree of the Bb major scale and F dominant corresponds with the fifth degree. It’s also a standard turnaround (chords that lead back to the beginning of the song form) to go to the sixth degree. In this case, the progression moves from G minor, then use a secondary dominant (G Dominant 7 b9) to lead back to the two chord, C minor."]
+    },
+    { 
+     keywords: ["harmony synths","add harmony","adding harmony"],
+      answers: ["Amapiano also incorporates lots of synths and dance music elements. Here’s an example of a progression using a synth pad created in ZENOLOGY. The harmony is simply so there can be more room for the other expressive textures in the song. By using an Eb minor and Ab minor triad, you can alternate between two different chords while maintaining common tones (Bb, Eb, Gb, Ab). This allows the track to feel like there’s harmonic motion while also creating a trance-like effect. By utilizing common tones, we create a simple synth melody that complements the drums and enhances the hypnotic effect of the synth pad. <p>These types of turnarounds frequently appear in jazz. In this context, they can provide enough harmonic information to create an interesting four-bar loop. Knowing the harmony of loops and samples is important when adding bass lines and additional melodies. You can recreate the harmony on a separate instrument to take the same loop and change the sound.  <p>type 'how to add log dru' mixing Log drum Tips</p>"]
+     },
+    {
+     keywords: ["add log drum","mix log drum","adding log drums","mastering log drums","adding log drum","mastering log drum","synth bass","log drum percussions"],
+      answers: ["The log drum may be the quintessential defining element of Amapiano music. While based on a real instrument, in Amapiano, the log drum is a hybrid tone somewhere between a kick drum, 808, synth bass, and actual log drum percussion. The log drum creates the bass lines and momentum for the songs. While there can be other bass lines, the log drum is essentially the 808 of Amapiano. You can use it as a rhythmic and harmonic accent to the drum pattern.<br><br>To get this sound, use ZENOLOGY to create your patch. To do this, load a basic kick sound using the PCM menu on the first partial (Synth Kick 4). Then add a sine wave on the second partial and a marimba PCM sample blended with a synth bass on the third partial. The fourth partial has a PCM sample of a Kalimba with some pitch modulation. Then slightly adjust the cutoff for the entire instrument. After creating this sound, pull up a Log Drum instrument in Sound Canvas VA. By layering these sounds, you can produce a log drum that sounds digital yet has some characteristics of the original instrumenthh<p>Type 'how to add baselines' for more </p> "] 
+     },
+    {
+     keywords: ["add baselines","adding baseline","add baseline","add baselines","mixing baseline","put baselines"],
+     answers: ["Now that we have our log drum instrument, let’s create a rhythmic bass line to complement our drum part. The log drum bass line functions as a more intense kick and a bass line. In this example, program the log drum as a punchy accent to the current drum part. Beyond following the harmony of the track, it’s essential to use syncopated rhythms to provide motion and intensity to the track. <p>Now let’s see how this log drum bass line interacts with an additional synth bass line. For this to work, keep the synth bass line rhythmically and melodically simple so that the log drum can still stand out. For the synth bass line, use the EU Bass patch on the SH-101. Notice how simple this bass line is in comparison to the log drum bass one. For the two to work together, the synth bass needs to be simple and add texture and presence more than rhythmic intensity</p><p>Type 'how to add whistles' to continue tutorial"]
+      },
+     {
+     keywords: ["bass line"],
+     answers: ["Please resend your message & this time type the word 'bass line' as a single word like this '<b>bassline</b>'"] 
+     },
+    { 
+     keywords: ["adding whistle","add whistle","master whistle","introduce whistles","introduce whistle"],
+     answers: ["One of the most distinctive elements in Amapiano is the use of whistles and bird sounds. These sounds help to grab the listener’s attention. DJs will sometimes even incorporate a live whistle into their sets. For the final component of our Amapiano tracks, let’s add bird sounds using the Sound Canvas VA instrument, which has many foley samples. These can create unique textures. Try using the Bird 2 patch and play a rhythmic part that complements the drum patterns with some syncopated offbeats."] 
+     }, 
+    //premium producer mode part 2 end
    {
     keywords: ["thanks to you","thanks you","thank you","thank yuh"],
     answers: ["You are welcome ❤️☺️,If want to know anything about Vigro Deep just know that I'm here to help❤️🤞🔥" ]
