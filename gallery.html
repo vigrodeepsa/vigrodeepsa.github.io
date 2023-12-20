@@ -82,12 +82,12 @@ next
 
 
 <div id="image-container">
-  <img id="image" src="./images/stories/2024/1.png" alt="Current Image">
+  <img id="image" src="./images/stories/2024/44.png" alt="Current Image">
 
 <br><br>
 
 <!---Zoomed image in the chat End--->     
-<div id="lo"></div>
+
 <style type="text/css">
 .link{
 text-decoration:none;
@@ -97,41 +97,6 @@ width:80%;
 }</style>
 <center><b>🔥🌴❤️For ever Vigro Deep 🔥🌴❤️</b></center>
 <center><a class="link" hfre="#">~ ❤️Lodwick Masete❤️</a></center>
-
-<script type="text/javascript">
-var currentImage = 1;
-var totalImages = 10;
-
-function changeImage(direction) {
-    currentImage += direction;
-    
-    if (currentImage < 1) {
-        currentImage = totalImages;
-    } else if (currentImage > totalImages) {
-        currentImage = 1;
-    }
-    
-
-    document.getElementById("image").src = "./images/stories/2024/" + currentImage + ".png";
-
-
-}
-
-document.getElementById("prev").addEventListener("click", function() {
-    changeImage(-1);
-});
-
-document.getElementById("next").addEventListener("click", function() {
-    changeImage(1);
-});
-
-document.getElementById("download").addEventListener("click", function() {
-    var link = document.createElement('a');
-    link.href = document.getElementById("image").src;
-    link.download = "image.png";
-    link.click();
-});
-
-</script>
+ <script  src="./js/image.js"></script>
 
 </html>

@@ -231,7 +231,7 @@ bottom:10px;
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
-        <h6 class="modal-title h4" id="exampleModalFullscreenLabel">Vigro Deep Sa Bot</h6> version 1.0 <a href="fullscreen.html"> fullscreen</a>
+        <h6 class="modal-title h4" id="exampleModalFullscreenLabel">Vigro Deep_Bot</h6> - 1.0 -<a href="fullscreen.html"> fullscreen</a>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body tooltip-demo">
@@ -1248,41 +1248,7 @@ next
 
 
 
-<script>
-    var currentImage = 1;
-    var totalImages = 30;
-
-    function changeImage(direction) {
-        currentImage += direction;
-        
-        if (currentImage < 1) {
-            currentImage = totalImages;
-        } else if (currentImage > totalImages) {
-            currentImage = 1;
-        }
-        
-        document.getElementById("image").src = "./images/stories/2024/" + currentImage + ".png";
-    }
-    
-    document.getElementById("prev").addEventListener("click", function() {
-        changeImage(-1);
-    });
-    
-    document.getElementById("next").addEventListener("click", function() {
-        changeImage(1);
-    });
-    
-    document.getElementById("download").addEventListener("click", function() {
-    var link = document.createElement('a');
-    link.href = document.getElementById("image").src;
-    link.download = "image.png";
-    link.click();
-    });
-    
-    
-</script>
-
-
+ <script  src="./js/image.js"></script>
  <script src="./js/bootstrap.bundle.min.js"></script>
  <script  src="./js/image-zooming.js"></script>
  <script  src="./js/tab-bar.js"></script>
