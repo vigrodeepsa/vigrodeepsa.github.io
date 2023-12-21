@@ -1,5 +1,3 @@
-
-
 const chatBox = document.getElementById('chat-log');
 const userInput =  document.getElementById('user-input');
 const typingDiv = document.getElementById('typing-indicator');
@@ -8,8 +6,11 @@ function sendMessage() {
 
   const userMessage = userInput.value.trim().toLowerCase();
   if (userMessage === '') return;
-
+  outcoming()
   const userDiv = document.createElement('div');
+  // Apply background color to new sent messages
+  const sentColor = sentColorPicker.value;
+  userDiv.style.backgroundColor = sentColor;
   userDiv.className = 'message sent';
   userDiv.textContent = userMessage;
   chatBox.appendChild(userDiv);
@@ -61,16 +62,25 @@ function hideTypingIndicator() {
 }
 
 function showBotResponse(response) {
+  incoming();  
   const botDiv = document.createElement('div');
   botDiv.className = 'message received';
   botDiv.innerHTML = response;
   chatBox.appendChild(botDiv);
+
+  // Apply background color to new bot response messages
+  const receivedColor = receivedColorPicker.value;
+  botDiv.style.backgroundColor = receivedColor;
+
   scrollToBottom();
 }
+
 
 function resetConversation() {
   chatBox.innerHTML = '<center>new conversation Started</center>';
   localStorage.removeItem('chatConversation'); // Clear local storage
+  document.getElementById("done-info").style.display= 'none';
+  document.getElementById("btn-save-changes").style.width= '100%';
 }
 
 // Load previous messages from local storage if available
@@ -94,3 +104,14 @@ function scrollToBottom() {
 const chatLog = document.getElementById("chat-log");
 chatLog.scrollTop = chatLog.scrollHeight;
 }
+
+
+function incoming() {
+    var chatSound = new Audio('./bot-assets/5.mp3');
+   chatSound.play();
+}
+function outcoming() {
+    var chatSound = new Audio('./bot-assets/4.mp3');
+   chatSound.play();
+}
+

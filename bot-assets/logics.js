@@ -314,12 +314,16 @@ const botLogics = [
    answers:[ "Just two months 😂"]
    },
    {
-   keywords: ["you enjoy doing","you like doing","your hobbies"],
+   keywords: ["what do you like","you enjoy doing","you like doing","your hobbies"],
    answers: ["I just like to chat with you, nothing else.😊"]
    },
    {
-   keywords: ["you care","do you care"],
-   answers: ["Bots don't have feelings,This doesn't mean that they are against you humans. it's just how they work,no offense ❤️"]
+   keywords: ["you don't even care","you're not carring","you won't care","you don't care","you care","do you care"],
+   answers: ["Bots don't have feelings,This doesn't mean that they are against you humans. it's just how they work ❤️"]
+   },
+   {
+   keywords: ["Your address","do you live","where are you from","your village","you from where","is your home"],
+   answers: ["i'm originated from South Africa / limpopo / Gasekororo / Madeira Village,However you should Know that I'm just a computer program that is programed to provide assistance","I don't have home,I'm just a computer program that is programed to provide assistance"]
    },
    {
    keywords: ["know maths","know math","you do maths","maths homework","help me with maths"],
@@ -447,6 +451,14 @@ const botLogics = [
     answers: ["I will tell jokes at the next version ,be patient as there will be more laughter 😂😂😂 in the next version" ]
     }, 
     {
+    keywords: ["you are a joke","you're a joke","you're just a joke","youre just a joke","youre a joke","you just a joke","you a joke"],
+    answers: ["What makes you to say those painfull words?,You should know by this time that I am just a computer program that is programed to provide information,Not to provide rude words ♥️","Joke 😂 ?You should know by this time that I am just a computer program that is programed to provide information,so however i can't be rude to anyone ♥️♥️♥️." ]
+    }, 
+    {
+    keywords: ["useless bot","you useless","you're a useless","you're just a useless","youre just a useless","youre a useless","you just a useless","you a useless"],
+    answers: ["How come i am useless ?,I am just a computer program that is programed to provide information,Not to provide rude words ♥️","Joke useless ?You should know by this time that I am just a computer program that is programed to provide information,so however i can't be rude to anyone ♥️♥️♥️." ]
+    }, 
+    {
     keywords: ["haha","nice joke","lol","so funny","hahaha"],
     answers: ["🤣😂","🤣😂🤣😂","glad you found tha funny 🤣😂","That's was funny? 🤣😂"]
     }, 
@@ -455,8 +467,8 @@ const botLogics = [
     answers: ["mhm it's new year already? what is the song of the year 2023?"]
     }, 
     { 
-    keywords: ["see you tommorow","sure","bye","talk later","goodbye","see you later","chat later","not now"],
-    answers: ["sure 👍","sure 👍 Have Nice day"]
+    keywords: ["see you tommorow","sure","bye","talk later","goodbye","see you later","chat later","not now","cheers"],
+    answers: ["sure 👍","Cheers 👍 Have Nice day","sure 👍","sure 👍 Have Nice day"]
     }, 
 ///---///
     {
@@ -836,7 +848,7 @@ const botLogics = [
    //bad language*explicit*against guidelines
    //START
    {
-    keywords: ["fuck","bitch","ass","asshole","arse"],
+    keywords: ["pick up a line","bewitch","kill people","killing people","killing of people","witch","moloi","umthagathi","thagatha","fuck","bitch","ass","asshole","arse"],
     answers:[ "I appreciate respectful conversations. Please refrain from using offensive language,Let's keep the conversation friendly and avoid using inappropriate words." ]
     },
    {
