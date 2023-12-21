@@ -13,7 +13,7 @@
       button { padding: 10px 30px; margin: 4px 2px; }
     </style>
 </head>
-<main class="chat">
+<main class="chat" >
 <div id="chat-log">
 <div class="message received" id="first-text">hi</div>
 
@@ -39,10 +39,11 @@
 </div>
 </div>
 <body>
-<div class="container">
 
- <a href="fullscreen.html">  <button onclick="resetConversation()">reset Chat</button></a>
-</div>
+
+
+
+
 <style type="text/css">
 .hide{
 display:none;
@@ -253,3 +254,123 @@ function unzoomImage() {
 <script src="./bot-assets/logics.js"></script>
 <script src="./bot-assets/processor.js"></script>
 </html>
+<style type="text/css">
+#settings{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+.messagec{
+    background-color: #d0d0d0;
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%;
+    text-align: left;
+}
+
+#btn-save-changes{
+width:100%;
+}
+
+
+</style>
+<hr>
+<button onclick="set()">Message settings</button>
+
+
+    <div id="settings">
+        <div class="messagec">
+
+
+<label for="received-color-picker">Bot Messages</label>
+<input type="color" id="received-color-picker">
+<button id="btn-change-received" hidden>Change Received Message Background Color</button>
+<hr>
+<label for="sent-color-picker">Your Messages</label>
+<input type="color" id="sent-color-picker" value="#FFD700">
+<button id="btn-change-sent" hidden>Change Sent Message Background Color</button>
+            <button class="resetConv" id="done-info"onclick="resetConversation()">Reset Conversation</button>
+            <button id="btn-save-changes">Save Changes</button>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript">
+
+function set(){
+
+            document.getElementById('settings').style.display = 'flex';
+            }
+
+
+// Get the color picker elements and buttons
+const sentColorPicker = document.getElementById('sent-color-picker');
+const receivedColorPicker = document.getElementById('received-color-picker');
+const changeSentColorBtn = document.getElementById('btn-change-sent');
+const changeReceivedColorBtn = document.getElementById('btn-change-received');
+const saveChangesBtn = document.getElementById('btn-save-changes');
+
+
+
+// Event listeners for the color picker buttons
+changeSentColorBtn.addEventListener('click', () => {
+  const sentColor = sentColorPicker.value;
+  document.querySelectorAll('.message.sent').forEach(message => {
+    message.style.backgroundColor = sentColor;
+  });
+  localStorage.setItem('sentMessageColor', sentColor);
+});
+
+changeReceivedColorBtn.addEventListener('click', () => {
+  const receivedColor = receivedColorPicker.value;
+  document.querySelectorAll('.message.received').forEach(message => {
+    message.style.backgroundColor = receivedColor;
+  });
+  localStorage.setItem('receivedMessageColor', receivedColor);
+});
+
+// Event listener for the save changes button
+saveChangesBtn.addEventListener('click', () => {
+  const sentColor = sentColorPicker.value;
+  const receivedColor = receivedColorPicker.value;
+  document.getElementById('settings').style.display = 'none';
+  document.getElementById('done-info').style.display = 'flex';
+  document.querySelectorAll('.message.sent').forEach(message => {
+    message.style.backgroundColor = sentColor;
+  });
+
+  document.querySelectorAll('.message.received').forEach(message => {
+    message.style.backgroundColor = receivedColor;
+  });
+
+  localStorage.setItem('sentMessageColor', sentColor);
+  localStorage.setItem('receivedMessageColor', receivedColor);
+
+});
+
+// Set initial colors from local storage if available
+const savedSentColor = localStorage.getItem('sentMessageColor');
+if (savedSentColor) {
+  sentColorPicker.value = savedSentColor;
+  document.querySelectorAll('.message.sent').forEach(message => {
+    message.style.backgroundColor = savedSentColor;
+  });
+}
+
+const savedReceivedColor = localStorage.getItem('receivedMessageColor');
+if (savedReceivedColor) {
+  receivedColorPicker.value = savedReceivedColor;
+  document.querySelectorAll('.message.received').forEach(message => {
+    message.style.backgroundColor = savedReceivedColor;
+  });
+}
+
+</script>

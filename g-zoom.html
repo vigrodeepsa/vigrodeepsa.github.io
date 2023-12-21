@@ -133,7 +133,7 @@ next
 
 
 <div id="image-container">
-  <img id="image" src="./images/stories/2024/1.png" alt="Current Image">
+  <img id="image" src="./images/stories/2024/45.png" alt="Current Image">
 
 <br>
 
@@ -141,7 +141,7 @@ next
 <!---Zoomed image in the chat start--->     
 <div class="zoomed-container" id="xx">
 <div class="zoomed">
-<img id="zoomed-img" src="./images/stories/2024/44.png" alt="">
+<img id="zoomed-img" src="./images/stories/2024/45.png" alt="">
 <a id="download-btn" class="download-btn" href="" download>Download</a>
 <a href="gallery.html"><b class="unzoom-btn" onclick="unzoomImage()">X</b> </a>
 </div>
@@ -156,8 +156,8 @@ text-decoration:none;
 <center><a class="link" hfre="#">~ ❤️Lodwick Masete❤️</a></center>
 
 <script type="text/javascript">
-var currentImage = 44;
-var totalImages = 44;
+var currentImage = 45;
+var totalImages = 48;
 
 function changeImage(direction) {
     currentImage += direction;
@@ -174,11 +174,11 @@ function changeImage(direction) {
 }
 
 document.getElementById("prev").addEventListener("click", function() {
-    changeImage(1);
+    changeImage(-1);
 });
 
 document.getElementById("next").addEventListener("click", function() {
-    changeImage(-1);
+    changeImage(1);
 });
 
 document.getElementById("download").addEventListener("click", function() {
@@ -219,4 +219,3 @@ document.getElementById("download").addEventListener("click", function() {
  }
  </script>
 </html>
-

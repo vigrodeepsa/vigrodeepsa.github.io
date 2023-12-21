@@ -169,13 +169,14 @@
 
 
 <div class="right">
-
+<!---
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-ad" viewBox="0 0 16 16">
 <path d="m3.7 11 .47-1.542h2.004L6.644 11h1.261L5.901 5.001H4.513L2.5 11h1.2zm1.503-4.852.734 2.426H4.416l.734-2.426h.053zm4.759.128c-1.059 0-1.753.765-1.753 2.043v.695c0 1.279.685 2.043 1.74 2.043.677 0 1.222-.33 1.367-.804h.057V11h1.138V4.685h-1.16v2.36h-.053c-.18-.475-.68-.77-1.336-.77zm.387.923c.58 0 1.002.44 1.002 1.138v.602c0 .76-.396 1.2-.984 1.2-.598 0-.972-.449-.972-1.248v-.453c0-.795.37-1.24.954-1.24z"/>
 <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
 </svg>
-
-<b>Ads </b></b> This is an ad free version
+--->
+take a 
+<a href="./quiz/index.html">1 min  Quiz Here</a>
 
 </div>
 
@@ -218,7 +219,11 @@ bottom:10px;
   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
   <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
 </a>  
-  </svg>stories</h3>
+  </svg>
+  <button onclick="set()" type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  stories</h3>
 
 <button type="button" class="btn btn-primary fixed" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen" >
 <newMsg class="red">+1</newMsg>
@@ -287,8 +292,121 @@ send
 </div>
 
 
-<button onclick="resetConversation()">Reset Conversation</button>
+
 <p>
+
+
+
+
+
+
+<style type="text/css">
+#settings{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+.messagec{
+    background-color: #d0d0d0;
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%;
+    text-align: left;
+}
+
+#btn-save-changes,.resetConv{
+width:50%;
+}
+
+.ft{
+
+display:flex;}
+</style>
+
+
+
+
+    <div id="settings">
+        <div class="messagec">
+<h4>Chat Settings</h4>
+
+<label for="received-color-picker">Bot Messages</label>
+<input type="color" id="received-color-picker">
+<button id="btn-change-received" hidden>Change Received Message Background Color</button>
+<hr>
+<label for="sent-color-picker">Your Messages</label>
+<input type="color" id="sent-color-picker" value="#FFD700">
+<button id="btn-change-sent" hidden>Change Sent Message Background Color</button>
+<hr>
+<label for="allow-sound">Sound effects</label>
+<label id="allow-sound" class="toggle-switch">
+  <input type="checkbox" checked disabled>
+  <span class="slider"></span>
+</label>
+<hr>
+<div class="ft">
+            <button class="resetConv" id="done-info"onclick="resetConversation()">Reset Conversation</button>
+ <br>   <button id="btn-save-changes">Save Changes</button>
+</div>        
+        </div>
+    </div>
+
+
+<style>
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .toggle-switch input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #cbc;
+      border-radius: 34px;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      border-radius: 50%;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+  </style>
+
+
+
+
 
 
 
@@ -1212,7 +1330,7 @@ border:2px solid green;
 </head>
 
 <div id="image-container">
-    <img id="image" src="./images/stories/2024/1.png" alt="Vigro Deep's Picture" class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></img>
+    <img id="image" src="./images/stories/2024/45.png" alt="Vigro Deep's Picture" class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></img>
 </div>
 
 <br>
@@ -1310,4 +1428,78 @@ document.getElementById('share-3-info').style.display = 'none';
 document.getElementById('share-2-info').style.display = 'none';
 document.getElementById('share-1-info').style.display = 'none';
 }
+</script>
+
+
+<script type="text/javascript">
+
+function set(){
+
+            document.getElementById('settings').style.display = 'flex';
+            }
+
+
+// Get the color picker elements and buttons
+const sentColorPicker = document.getElementById('sent-color-picker');
+const receivedColorPicker = document.getElementById('received-color-picker');
+const changeSentColorBtn = document.getElementById('btn-change-sent');
+const changeReceivedColorBtn = document.getElementById('btn-change-received');
+const saveChangesBtn = document.getElementById('btn-save-changes');
+
+
+
+// Event listeners for the color picker buttons
+changeSentColorBtn.addEventListener('click', () => {
+  const sentColor = sentColorPicker.value;
+  document.querySelectorAll('.message.sent').forEach(message => {
+    message.style.backgroundColor = sentColor;
+  });
+  localStorage.setItem('sentMessageColor', sentColor);
+});
+
+changeReceivedColorBtn.addEventListener('click', () => {
+  const receivedColor = receivedColorPicker.value;
+  document.querySelectorAll('.message.received').forEach(message => {
+    message.style.backgroundColor = receivedColor;
+  });
+  localStorage.setItem('receivedMessageColor', receivedColor);
+});
+
+// Event listener for the save changes button
+saveChangesBtn.addEventListener('click', () => {
+  const sentColor = sentColorPicker.value;
+  const receivedColor = receivedColorPicker.value;
+  document.getElementById('settings').style.display = 'none';
+  document.getElementById('done-info').style.display = 'block';
+
+  document.querySelectorAll('.message.sent').forEach(message => {
+    message.style.backgroundColor = sentColor;
+  });
+
+  document.querySelectorAll('.message.received').forEach(message => {
+    message.style.backgroundColor = receivedColor;
+  });
+
+  localStorage.setItem('sentMessageColor', sentColor);
+  localStorage.setItem('receivedMessageColor', receivedColor);
+
+});
+
+// Set initial colors from local storage if available
+const savedSentColor = localStorage.getItem('sentMessageColor');
+if (savedSentColor) {
+  sentColorPicker.value = savedSentColor;
+  document.querySelectorAll('.message.sent').forEach(message => {
+    message.style.backgroundColor = savedSentColor;
+  });
+}
+
+const savedReceivedColor = localStorage.getItem('receivedMessageColor');
+if (savedReceivedColor) {
+  receivedColorPicker.value = savedReceivedColor;
+  document.querySelectorAll('.message.received').forEach(message => {
+    message.style.backgroundColor = savedReceivedColor;
+  });
+}
+
 </script>
