@@ -1,6 +1,6 @@
 
-var currentImage = 44;
-var totalImages = 44;
+var currentImage = 48;
+var totalImages = 48;
 
 function changeImage(direction) {
     currentImage += direction;
@@ -31,5 +31,4 @@ document.getElementById("download").addEventListener("click", function() {
     link.download = "image.png";
     link.click();
 });
-
 
