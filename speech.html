@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bot with NLP</title>
+</head>
+<body>
+  <input type="text" id="userInput" placeholder="Type your message here">
+  <button onclick="getResponse()">Send</button>
+  <div id="botResponse"></div>
+
+  <script>
+    const botLogics = [
+      {
+        keywords: ["hi", "hello", "hey", "hellos", "hellows", "hii", "heyy", "hello", "hellow"],
+        answers: ["Hello there! 👋", "Eyy 🥺🤟", "Hola 🤟, how's the euphoria mix going anyway?", "Heyy", "hello 🌴❤️☺️"]
+      },
+      {
+        keywords: ["how is it", "how's it going", "how's everything", "how are things", "how are you", "how are you feeling", "how you feeling", "how are you doing", "how are you", "hows you", "how's you", "are you good", "are you fine", "are alright", "how you're doing"],
+        answers: ["Thank you for asking,<br> but as a bot, I don't have feelings. But I get more & more excited when Vigro Deep releases ❤️🔥."]
+      }
+    ];
+
+    function getResponse() {
+      const userInput = document.getElementById('userInput').value.toLowerCase();
+      const response = generateBotResponse(userInput);
+      displayBotResponse(response);
+      speakResponse(response);
+    }
+
+    function generateBotResponse(userInput) {
+      for (const logic of botLogics) {
+        for (const keyword of logic.keywords) {
+          if (userInput.includes(keyword)) {
+            return logic.answers[Math.floor(Math.random() * logic.answers.length)];
+          }
+        }
+      }
+      return "I'm not sure how to respond to that.";
+    }
+
+    function displayBotResponse(response) {
+      const botResponseDiv = document.getElementById('botResponse');
+      botResponseDiv.innerHTML = response;
+    }
+
+    function speakResponse(response) {
+      const speechSynthesis = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(response);
+      speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>
