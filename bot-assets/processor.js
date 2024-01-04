@@ -2,19 +2,27 @@ const chatBox = document.getElementById('chat-log');
 const userInput =  document.getElementById('user-input');
 const typingDiv = document.getElementById('typing-indicator');
 
+function getCurrentTime() {
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  return `${hours}:${minutes}`;
+}
+
 function sendMessage() {
 
-  const userMessage = userInput.value.trim().toLowerCase();
+  const userMessage = userInput.value.trim();
   if (userMessage === '') return;
-  outcoming()
+  outcoming();
   const userDiv = document.createElement('div');
+
+
   // Apply background color to new sent messages
   const sentColor = sentColorPicker.value;
   userDiv.style.backgroundColor = sentColor;
   userDiv.className = 'message sent';
-  userDiv.textContent = userMessage;
+  userDiv.textContent = userMessage ;
   chatBox.appendChild(userDiv);
-
   showTypingIndicator();
 
   setTimeout(() => {
@@ -37,9 +45,21 @@ function generateBotResponse(userMessage) {
   if (keywordsMatched.length > 0) {
     const botAnswers = keywordsMatched.map(logic => logic.answers[Math.floor(Math.random() * logic.answers.length)]);
     return botAnswers.map(answer => addEmojis(answer, userMessage)).join('<p>');
-  } else {
-    return 'Sorry, I didn\'t understand that,Try asking something else.';
+  } 
+  else {
+  const defaultResponses = [
+  "I'm not sure I understand. Could you rephrase that?",
+  "I didn't catch that. Can you try asking in a different way?",
+  "I'm still learning, so I might not have an answer for that. Can you try another question?",
+  "Hmm, that's a tough one. Let me think...",
+  "I'm not programmed to respond to that. Can you ask something else?",
+  "I'm sorry, I don't have the information you're looking for at the moment."
+  ];
+  return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
   }
+  
+
+
 }
 
 function addEmojis(answer, userMessage) {
@@ -62,10 +82,12 @@ function hideTypingIndicator() {
 }
 
 function showBotResponse(response) {
+
   incoming();  
   const botDiv = document.createElement('div');
+  const currentTime = getCurrentTime(); 
   botDiv.className = 'message received';
-  botDiv.innerHTML = response;
+  botDiv.innerHTML = response + '<br><span id="receivedTime" class="time-2">'+ getCurrentTime()+'</span>';
   chatBox.appendChild(botDiv);
 
   // Apply background color to new bot response messages
@@ -81,6 +103,8 @@ function resetConversation() {
   localStorage.removeItem('chatConversation'); // Clear local storage
   document.getElementById("done-info").style.display= 'none';
   document.getElementById("btn-save-changes").style.width= '100%';
+localStorage.removeItem('sentTime');
+localStorage.removeItem('receivedTime');
 }
 
 // Load previous messages from local storage if available
@@ -99,7 +123,8 @@ function saveConversation() {
 window.addEventListener('beforeunload', saveConversation);
 window.hideTypingIndicator();
 
-// Add this JavaScript function to scroll to the bottom of the chat log
+
+// function to scroll to the bottom of the chat log
 function scrollToBottom() {
 const chatLog = document.getElementById("chat-log");
 chatLog.scrollTop = chatLog.scrollHeight;
@@ -114,4 +139,3 @@ function outcoming() {
     var chatSound = new Audio('./bot-assets/4.mp3');
    chatSound.play();
 }
-

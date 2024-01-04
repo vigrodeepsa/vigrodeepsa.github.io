@@ -1,12 +1,146 @@
 const botLogics = [
   {
     keywords: ["hi", "hello", "hey","hellos","hellows" , "hii", "heyy","hello","hellow"],
-    answers: [ "Hello there! 👋","Eyy 🥺🤟", "Hola 🤟, how's the euphoria mix going anyway?", "Heyy","hello 🌴❤️☺️",]
+    answers: [ "Hello there! 👋","Eyy 🥺🤟", "Hola 🤟", "Heyy","hello 🌴❤️☺️",]
   },
-  { keywords: ["how is it","how's it going", "how's everything", "how are things","how are you","how are you feeling" , "how you feeling", "how are you doing","how are you" , "hows you", "how's you","are you good","are you fine" , "are alright", "how you're doing"], 
-    answers: ["Thank you for asking,<br> but as bot i don't have feelings.But I get more & more exited when Vigro Deep Releases ❤️🔥." ]
+  { keywords: ["help me"], 
+    answers: [
+    "what kind of help do you need?<br>Do you still need it now?",
+    "help you with?,Are you sure you need help",]
+  },
+  { keywords: ["mhm","mhmm","but"], 
+    answers: ['Go On...', ]
+  },
+  { keywords: ["did they","didn't they"], 
+    answers: [
+    "i'm not sure if they did that",
+    "I'm not sure that they could do that",
+    "I have no idea if they did",
+     ]
+  },
+  { keywords: ["did he","didn't he"], 
+    answers: [
+    "i'm not sure if he did that",
+    "I'm not sure that he could do that",
+    "I have no idea if he did it",
+     ]
+  },
+  { keywords: ["did she","didn't she"], 
+    answers: [
+    "i'm not sure if she did that",
+    "I'm not sure that she could do that",
+    "I have no idea if she did it",
+     ]
+  },
+  { keywords: ["chatgpt","gpt"], 
+    answers: [
+    'You <b>ChatGPT</b> too? You must be a bot lover,<br>if you got a chance ,tell ChatGPT about me please 🥺',
+    'By proccesing this image ,i can tell that you are a bot lover ,am i right?'
+    ]
+  },
+  { keywords: ["okay"], 
+    answers: ['✌️', ]
+  },
+  { keywords: ["no problem"], 
+    answers: [
+    "That's awesome if there's no problem",
+    "That is good,We really don't want problems",
+    "Vele are batle mathata"
+     ]
+  },
+  { keywords: ["not you","isn't you","ain't"], 
+    answers: [
+    'Not me ? Then who 🤷',
+    "I wonder who 🤔,if it's not me ",
+    'if not me, then who could it be 🤔 '
+    ]
   },
   
+  { keywords: ["which one"], 
+    answers: [
+    "i don't know which one,this is because i don't have personal preferences", 
+    "Not shure about about which one"
+   ]
+  },
+  { keywords: ["your father","your mother","your family","your parents"], 
+    answers: [
+    "I don't have,Remember that i'm just a computer program",
+     "i don't have family",
+     "bots does'nt have families"
+     ]
+  },
+  { keywords: ["that's bad","that is bad ","that's so sad","so sad","that is so sad"], 
+    answers: [
+    '😭🥺😓😥','😭','🥺','😥','😓' ]
+    },
+  { keywords: ["you are not funny","not funny at all","i'm bot laughing","i am not laughing","what is so funny","that's not funny","that ain't funny"], 
+    answers: [
+    "wooh🙆 Someone is not in the mood today !🥶",
+    "oops 🙆 Someone is not in the mood for laughter today !🥶",
+    "oops,My bad🥶 let's change the topic",
+    ]
+  },
+  { keywords: ["which topic","what topic"], 
+    answers: [
+    "i have no idea which topic,You have any in mind?", 
+    "i don't have personal preferences ,How about a random one",
+    ]
+  },
+  { keywords: ["that's fantastic","that's so fantastic","that is so amaizing","that is so awesome","that is so good","that is so perfect","that's awesome","that's good","that's perfect"], 
+    answers: [
+    "😜 😜 😜",
+    "❤️ 😁 😜",
+    "yeah it is ❤️😁😜"
+     ]
+  },
+  { keywords: ["like what"], 
+    answers: [
+    "opps i don't know ,It could be anything",
+    "opps i'm clueless about that ,It could be anythingm<br>You have any in mind maybe?",
+    "like ...Actually i don't know .You can come with an idea",
+    "could be anything random",
+    ]
+  },
+  { keywords: ["when is your birthday","what is your birthdate","what is your birthday"], 
+    answers: [
+    "How silly are you asking about my birthday while knowing that i'm just a computer program?🙆😂 <br> but anyway i'll just tell you. how about <b>16th of july</b>",
+    "Smart question heh 😎 ,<br>i'm just a computer program?🙆😂 <br> how about <b>16th of july</b> ", 
+    "So funny how you guys keep on asking about my birthday 😎 🤣,<br>i'm just a computer program?<br> anyway how about <b>16th of july</b> ", 
+    ]
+  },
+  { keywords: ["when will you"], 
+    answers: ["Not sure of the exact date","not sure about the date","I'm not sure when i will do that exaclty", ]
+  },
+  { keywords: ["your phone numbers","your cell numbers","your cell numbers","your contact numbers","your phone number","your cell number","your contact number"], 
+    answers: [
+    '<b>0720261036</b><p></p> this cell number belongs to My author/Creator',
+    '<b>0720261036</b><p></p> please note that this phone number belongs to My author/Creator',
+     ]
+  },
+  { keywords: ["your email","your email address","emailing you","your gmail address"], 
+    answers: [
+    '<b><a href="malito:vigrodeepsafans@gmail.com" class="blue">vigrodeepsafans@gmail.com</a></b><p></p> My author/Creator has access to this email',
+    '<b><a href="malito:vigrodeepsafans@gmail.com" class="blue">vigrodeepsafans@gmail.com</a></b><p></p> please note that this email is managed by  My author/Creator',
+     ]
+  },
+  { keywords: ["give you that name","giving you this name","giving you that name","renaming you","renamed you","gave you name","gave you that name","named you"], 
+    answers: [
+    '<b>Lodwick Masete</b> Gave/Named me @July because this name is one of his childhood names',
+    'Named by <b>Lodwick Masete</b>,<br>people including his parents Used to call him @july. so that\'s why he named me that. ',
+     ]
+  },
+  { keywords: ["hash tags"], 
+    answers: [
+    '#<b><a href="./tags/hovdsa.html" class="blue" >hovdsa</b>',
+    '#<b><a href="./tags/vigro.html" class="blue" >Vigro deep</b>'
+    ]
+  },
+  { keywords: ["thank you","thank"], 
+    answers:["😊😊😊","It's always a pleasure 😊","You're welcome 😊", "Don't worry it's water under the bridge 😊"]
+  },
+  { keywords: ["how is it","how's it going", "how's everything", "how are things","how are you","how are you feeling" , "how you feeling", "how are you doing","how are you" , "hows you", "how's you","are you good","are you fine" , "are alright", "how you're doing"], 
+    answers: ["My admin is working on improving this chat,How can i help you","I'm always fine ,How can i help you Today","Thank you for asking,<br> but as bot i don't have feelings.But I get more & more exited when Vigro Deep Releases ❤️🔥." ]
+  },
   {
     keywords: ["vigro's pictures","deep's pics","deep's pictures","deep photos","share photos", "send photos", "send pics", "deep picutures", "vigro photos", "deep's pics","deep's photos"],
     answers: ['<img onclick="zoomImage(\'./images/stories/3.png\')" src="./images/stories/3.png" width="50px" alt="internet Connection is required to view images">']
@@ -34,6 +168,22 @@ const botLogics = [
   {
   keywords: ["i quit","am quiting","i give up","i gave up","not my thing","am depressed","am so sad"], 
   answers:["actually, quitting is for winners. know when to quit, change direction, leave a toxic situation, demand more from life, give up on something that isn't for you, and move on... <p> <p> the peace you'll get from quitting something that is clearly not for you is better than the stress you'll get from trying to prove yourself to other people.💜✌️ 🔥❤️🥺</p></p>","know when to quit, change direction, leave a toxic situation, demand more from life.<p><p>In all situations, know that God's time is the best and if you don't give up, your time shall surely come.🔥❤️🥺 </p></p>"]
+  },
+  {
+  keywords: ["i just want to","thinking about doing","i want to","i just want to"], 
+  answers:["<b>Okay 🥺 </b>Are you sure about that?","Surely that your choice to make.","Have you thought about that about that kind of decision yet?"]
+  },
+  {
+  keywords: ["is a good idea","that is a good idea","that's a bad idea","is it a good idea","isn't it","is that so","is that so"], 
+  answers:["that will depend","depends on specific cases","that will have to depend on something that i don't know","Not sure about that."]
+  },
+  {
+  keywords: ["i think","i was thinking"], 
+  answers:["i would't be so sure about telling you accurate answer","we all have those different perspectives."]
+  },
+  {
+  keywords: ["i thought"], 
+  answers:["i'm not sure if other had that in mind","we all had those different perspectives."]
   },
   {
   keywords: ["am the best","am the toppest","i'm the toppest","better than me","am better than","i'm better than"], 
@@ -171,7 +321,7 @@ const botLogics = [
    },
    {
    keywords: ["can you talk","can you speak","your voice","do you speak"],
-   answers:[ "I can't speak.this functionality is not yet added."] 
+   answers:["That would be so lovely to hear me speaking,Unfortunatel i can't.<br>My author will be looking foward to add this functionality soon","Not yet, i can't tell the date but soon i will be able to speak","I can't speak.this functionality is not yet added."] 
    },
    {
    keywords: ["sing for me","can you sing","do you sing","sing a song for me","sing any song for me.sing a song","do you sing"],
@@ -463,8 +613,8 @@ const botLogics = [
     answers: ["🤣😂","🤣😂🤣😂","glad you found tha funny 🤣😂","That's was funny? 🤣😂"]
     }, 
     {
-    keywords: ["happy new year","it's new yeah","song of the year","year 2024","new year's eve","new year's"],
-    answers: ["mhm it's new year already? what is the song of the year 2023?"]
+    keywords: ["song of year","best track in 2023","song for the year","year's song","new year song","best song in 2023","song of the year"],
+    answers: ['<b class="blue">Keneilwe By master Kg</b>','in 2023 Song of the year was <b class="blue">Keneilwe By master Kg</b>' ,'Song Of the for 2023 is <b class="blue">Keneilwe By master Kg</b>']
     }, 
     { 
     keywords: ["see you tommorow","sure","bye","talk later","goodbye","see you later","chat later","not now","cheers"],
@@ -593,20 +743,28 @@ const botLogics = [
      answers:[ " Get ready to experience pure euphoria mix as Vigro Deep SA has just released a mind-blowing 2 hour and 32 minute mix that is guaranteed to take you on a musical journey like no other. Filled with pulsating beats, infectious melodies, and electrifying energy, this mix is a testament to Vigro Deep's unparalleled talent and creativity. So, gather your friends, turn up the volume, and let yourself be swept away by the euphoric sounds of Vigro Deep SA. Trust me, you don't want to miss out on this 🔥!" ]
      },
     {
-     keywords: ["song of the year","of the year","nominate mix","mixtape of the year","mixtape to win","mixtape awards","mixtape award","of the year award","of the year awards","mix award","mix awards","mixtape award","mixtape awards"],
+     keywords: ["of the year by vigro","nominate mix","mixtape of the year","mixtape to win","mixtape awards","mixtape award","of the year award","of the year awards","mix award","mix awards","mixtape award","mixtape awards"],
      answers:[ "Vigro Deep is  known for his popular mixtapes and albums in the amapiano genre. His mixtapes often feature a collection of tracks that have a significant impact on the music industry and resonate with fans. While mixtapes are not typically considered for song of the year, Vigro Deep's work has been influential in the amapiano scene and has garnered a large following.  In the context of Vigro Deep, his mixtapes could certainly stand a chance of winning song of the year, or at least being considered for the title. His music has made a significant impact on the industry and has gained popularity among fans. While it may be unconventional for a mixtape to win song of the year, Vigro Deep's work has shown that mixtapes can have a powerful influence and be contenders for prestigious awards."]
      },
     {
-     keywords: ["new year song","of the year","euphoria trend","euphoria mix of the year","euphoria trend is","euphoria win","euphoria of the year"],
+     keywords: ["of the year by vigro","euphoria trend","euphoria mix of the year","euphoria trend is","euphoria win","euphoria of the year"],
      answers: ["Vigro Deep's mixtapes have had a significant impact on the amapiano genre and have gained a large following. While mixtapes are not typically considered for song of the year, his work has shown that they can have a powerful influence and be contenders for prestigious awards. His music has resonated with fans and has been influential in the industry, making it deserving of recognition in the song of the year category."]
+     },
+     {
+     keywords: [" %"],
+     answers: ["happy new year! wishing you a fantastic year ahead filled with joy and success. 🎉"]
+     },
+     {
+     keywords: ["happy new year"],
+     answers: ["happy new year! wishing you a fantastic year ahead filled with joy and success. 🎉"]
      },
     {
      keywords: ["100% production","produced euphoria","euphoria composer","100 production","100% production","euphoria production","euphoria mix production","mix production","mix produced","mix producer"],
      answers:[ "The title \"euphoria mix 100% production\" suggests that the mixtape is entirely composed of original production by Vigro Deep. This showcases his skill and creativity as a producer, making it a strong contender for song of the year. The mixtape's impact on the amapiano genre and its large following further solidify its potential for recognition in the prestigious awards category. Overall, the title indicates that the mixtape has the qualities and influence to be considered for song of the year." ]
      },
     {
-     keywords: ["euphoria role","role in piano","role in amapiano","significant role","100% produced by","totally produced","100% produced","euphoria 100%","% production"],
-     answers: ["You're welcome! It's clear that Vigro Deep's \"euphoria mix 100% production\" has made a significant impact on the music scene and has the potential to be recognized as a standout piece of work. It will be interesting to see how it is received in the awards category." ]
+     keywords: ["euphoria role","role in piano","role in amapiano","significant role","100% produced","totally produced","100 % produced","euphoria 100%"],
+     answers: ["It's clear that Vigro Deep's \"euphoria mix 100% production\" has made a significant impact on the music scene and has the potential to be recognized as a standout piece of work. It will be interesting to see how it is received in the awards category." ]
      },  
     {  
      keywords: ["explain the title euphoria mix","discuss title of euphoria mix","why is it called euphoria","euphoria mix title","amapiano and euphoria","name euphoria mix","euphoria mix name","melodic texture","dynamic rhythms","dynamic rhythm","melodic texture","dynamic mix"],
@@ -848,8 +1006,8 @@ const botLogics = [
    //bad language*explicit*against guidelines
    //START
    {
-    keywords: ["pick up a line","bewitch","kill people","killing people","killing of people","witch","moloi","umthagathi","thagatha","fuck","bitch","ass","asshole","arse"],
-    answers:[ "I appreciate respectful conversations. Please refrain from using offensive language,Let's keep the conversation friendly and avoid using inappropriate words." ]
+    keywords: ["fucking","fucked","pick up a line","bewitch","kill people","killing people","killing of people","witch","moloi","umthagathi","thagatha","fuck","bitch","ass","asshole","arse"],
+    answers:["Blasphemous language, crude language and swear words are unacceptable.Please refrain from using offensive language.", "I appreciate respectful conversations. Please refrain from using offensive language,<p>However we can </b>keep the conversation friendly and avoid using inappropriate words." ]
     },
    {
     keywords: ["shit","damn","bloody","dick","prick","penis","pillock","frigging","bollocks","shit","crap","bastard","slapper arse","dork","tits","moron"],
@@ -873,7 +1031,7 @@ const botLogics = [
     },
    {
     keywords: ["porn","pornography","porns"],
-    answers: ["Let's keep the conversation friendly and avoid using sexual language because it goes against the content guidelines."]
+    answers: ["Please refrain from using offensive sexual language.","Let's keep the conversation friendly and avoid using sexual language because it goes against the content guidelines."]
     },
    {
     keywords: ["share nudes","naked picture","brazzers","share dark meme","motherfucker","mother fucker","slut"],
@@ -884,6 +1042,5 @@ const botLogics = [
     answers:[ "Hacking goes against the content guidelines. " ]
     }
    //bad language*explicit*against guidelines END
-   //END  
-  
+   //END    
 ];
