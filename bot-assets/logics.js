@@ -1,4 +1,39 @@
+//It is evident that he enjoys his music career, which has arguably shaped his entire life. The passion with which he has been working continues to earn him more fame in the industry. 
+ 
+
+
+// 1.  He gained the celebrity status within a year How did Vigro deep get famous? After quitting school, Kamogelo Phetla took a better part of 2017 training in music production. The star exhausted all the support contacts could afford to make sure he stayed ahead of others. Some of the visionary talents who shaped Vigro include DJ Buckz and Oskido.
+//You see here kid. You gotta just go for it, 
+//don't think about what comes after or what came before.
+//you just got to bare your knees ,take a deep breath
+// and jump.and you might think,'what if i fall,or what if you don't ,what if you fly,
+
 const botLogics = [
+
+{ keywords: ["return to school","back to school"], 
+  answers: ["Vigro deep  has promised to go back to class because he believes that education is essential in life."]
+},
+
+{ keywords: ["learnt","taught vigro","teached vigro","helped vigro"], 
+  answers: ["well,Being the son of Victor Godfather, he got the opportunity of touring the studio and learnt how to beat-make and produce his music. "]
+},
+
+{
+ keywords: ["grade 10","after he leave school","he left school","after he quit school","after he droped out","after he left school","after leaving school","after he left school","after quiting school","after droping out","droped out after","after left school","after vigro leaving school","after vigro left school","after vigro quiting school","after vigro droping out","after vigro droped out","after vigro left school", "after vigro deep leaving school","after vigro deep left school","after vigro deep quit school","after vigro deep droping out","after vigro deep droped out","after vigro deep left school"],
+  answers: ["Fame came knocking all the time. The success that followed the Baby Boy project's release strained his school days, so much that he could no longer attend all lessons. As a result, he dropped out in <b>grade 10 </b>to concentrate on his career.","Vigro's music career is particularly outstanding because it took shape after he droped out school. <br> how ever   Discovering his talent at a young age made Vigro Deep school days shorter." ,"Vigro's music career is particularly outstanding because it took shape after he left school.<p>therefore Discovering his talent at a young age made Vigro Deep school days shorter</p>" ,"Vigro's music career is particularly outstanding because it took shape after leaving school.<br>Discovering his talent at a young age made Vigro Deep school days shorter" ]
+},
+
+   {
+   keywords: ["baby face","babyface","vigro old","old is vigro deep","years vigro has","years vigro have","years vigro deep has","years vigro deep have"], 
+   answers: [
+          "The babyface says much about Vigro Deep age and proves the fact that the DJ is still young.and he recently turned 22 years old.",
+          "He was born on 6th September 2001 in Atteridgeville, West Pretoria, South Africa. Vigro Deep full name is Kamogelo Phetla, and he recently turned 22 years old."]
+   },
+{
+  keywords: ["famous father","celebrity father","well known father","known father","his father","good father"],
+  answers: [ "Vigro Deep has a famous father"]
+},
+
   {
     keywords: ["hi", "hello", "hey","hellos","hellows" , "hii", "heyy","hello","hellow"],
     answers: [ "Hello there! 👋","Eyy 🥺🤟", "Hola 🤟", "Heyy","hello 🌴❤️☺️",]
@@ -146,7 +181,7 @@ const botLogics = [
     answers: ['<img onclick="zoomImage(\'./images/stories/3.png\')" src="./images/stories/3.png" width="50px" alt="internet Connection is required to view images">']
   },
   {
-    keywords: ["who's vigro" ,"who is kamohelo", "who is vigro","me about vigro","whos vigro" ],
+    keywords: ["who is kamogelo" ,"who is kamohelo", "who is vigro","me about vigro","whos vigro" ],
     answers: [ "Vigro Deep is a renowned South African DJ and record producer known for his contributions to the Amapiano music genre.Vigro Deep's real name is Kamogelo Phetla"]
   },
   {
@@ -332,6 +367,10 @@ const botLogics = [
    answers:[ "happy born day 🌍🎂","wishing happiest birthday ever 🌍🎂🎁","Happy birthday 🌍🎂🍰🥧🎁🎉"]
    },
    {
+   keywords: ["tell me more"],
+   answers: ["Did that cheer you?","you want more?","ohh you want more ?","more info may be limited"]
+   },
+   {
    keywords: ["mxm"],
    answers: ["🙆, what's wrong with the 'mxm' now 🤷","why th 'mxm' word ? seems like you're feeling annoyed","'mxm'?"]
    },
@@ -352,9 +391,12 @@ const botLogics = [
    answers: ["Atteridgeville, Pretoria Vigro Deep / Place of birth Atteridgeville is a township located to the west of Pretoria, South Africa. It is located to the east of Saulsville, to the west of West Park; to the north of Laudium and to the south of Lotus Gardens."]
    },
    {
-   keywords: ["who is victor","who is the father","about victor ngcongwana","father of vigro deep","deep's biological father","house dj","deep house kings","godfather of deep","godfathers of deep"],
-   answers:  [ "Victor Ngcongwana (Vigro Deep's Father), Victor Ngcongwana has been a major influence on how he navigates his creative and business endeavours. The legendary house DJ is one of the founding members of The Godfathers of Deep House South Africa🔥"]
+   keywords: ["who is victor","who is the father","about victor ngcongwana","father of vigro deep","deep's biological father","house dj","deep house kings","godfather of deep","godfathers of deep","vigro's father","deeps's father","deep father","deep'father","vigro father","name of father","fathers name","name of the father","name of father"],
+   answers:  [ 
+        "Victor Ngcongwana (Vigro Deep's Father), <b>Victor Ngcongwana</b> has been a major influence on how he navigates his creative and business endeavours. The legendary house DJ is one of the founding members of The Godfathers of Deep House South Africa🔥",
+        "Vigro Deep is the son of the famous <b>Victor Ngcongwana</b> (Dj Spring). Vigro Deep house music is as entertaining as that of his dad, a co-founder in Godfather of House. Looking at his social media page, Kamogelo has a very close relationship with his parents, who are his number one cheerleaders."]
    },
+   
    {
    keywords: ["Time took to create you", "Development duration", "long to build you?"],
    answers: ["It took approximately 5 months to develop me."]
