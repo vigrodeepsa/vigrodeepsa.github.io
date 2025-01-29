@@ -64,6 +64,181 @@ border:2px solid black;
 padding-top:70px;
 }
 </style>
+<style>
+    body {
+        font-family: system-ui, -apple-system, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+    }
+    .news-item {
+        border-bottom: 1px solid #eee;
+        padding: 20px 0;
+    }
+    .date {
+        color: #666;
+        font-size: 0.9em;
+    }
+    .headline {
+        color: #1a1a1a;
+        font-size: 1.2em;
+        font-weight: 600;
+        margin: 8px 0;
+    }
+    .content {
+        color: #444;
+    }
+    .tag {
+        display: inline-block;
+        background: #f0f0f0;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.8em;
+        margin-right: 8px;
+        color: #666;
+    }
+</style>
+<style type="text/css">
+/* style.css */
+
+
+.highlight-item {
+background-color: #fff;
+padding: 15px;
+margin-bottom: 10px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+</style><style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  /* Style 1: Simple Accordion */
+  .faq-simple {
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .faq-simple details {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .faq-simple summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  .faq-simple p {
+    margin-top: 10px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Style 2: Modern with Animation */
+  .faq-modern {
+    margin-bottom: 30px;
+  }
+
+  .faq-modern .faq-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .faq-modern .faq-question {
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+
+  .faq-modern .faq-question:hover {
+    background: #45a049;
+  }
+
+  .faq-modern .faq-answer {
+    background: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .faq-modern .faq-content {
+    padding: 15px;
+    line-height: 1.6;
+  }
+
+  /* Style 3: Minimalist */
+  .faq-minimalist {
+    margin-bottom: 30px;
+  }
+
+  .faq-minimalist details {
+    border-left: 3px solid #3498db;
+    margin-bottom: 10px;
+    background: white;
+    transition: all 0.3s;
+  }
+
+  .faq-minimalist details:hover {
+    border-left-color: #2980b9;
+  }
+
+  .faq-minimalist summary {
+    padding: 15px;
+    cursor: pointer;
+    color: #3498db;
+    font-weight: 500;
+  }
+
+  .faq-minimalist p {
+    padding: 0 15px 15px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Custom arrow for native details/summary */
+  details > summary {
+    list-style: none;
+  }
+
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-modern .active .faq-answer {
+    max-height: 500px;
+  }
+  
+  a{text-decoration:none;}
+</style>
 </head>
 
 <div class="web-name">
@@ -87,8 +262,8 @@ want your own ?
 
     check out More Apps
 
-<div class="ad-placeholder" onclick="loadPage('album.html')">
-Grass is Greener
+<div class="ad-placeholder">
+comming soon
 <svg style="width:30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
   <g>
     <polygon points="16.4,8.5 15.1,7.3 11,11.4 11,2.4 9.2,2.4 9.2,11.3 5.2,7.3 3.9,8.5 9.5,14.1 9.5,14.1 9.5,14.1 10.8,14.1 10.8,14.1"/>
@@ -103,8 +278,55 @@ Grass is Greener
     </div>
 
 <main class="main">
-<a href="#" onclick="toggleSidebar()" >Comming Soon</a>
+
+
+<!-- Style 1: Simple Accordion -->
+<div class="faq-simple">
+  <details open>
+    <summary>Who is Vigro Deep?</summary>
+    <p>Vigro Deep is a South African DJ and producer known for his contributions to the Amapiano genre. He has gained international recognition for his unique sound and deep basslines.</p>
+  </details>
+  <details>
+    <summary>What are some of Vigro Deep's popular songs?</summary>
+    <p>Some of his popular tracks include "Untold Story," "Blue Monday," "International," and "Ghost Producer." His music is known for its deep, soulful beats.</p>
+  </details>
+</div>
+
+
+<!-- Style 3: Minimalist -->
+<div class="faq-minimalist">
+  <details open>
+    <summary>Where can I listen to Vigro Deep’s music?</summary>
+    <p>Vigro Deep’s music is available on major streaming platforms like Spotify, Apple Music, and YouTube. He also releases some tracks on SoundCloud.</p>
+  </details>
+  <details>
+    <summary>Is Vigro Deep on social media?</summary>
+    <p>Yes, he is active on platforms like Instagram, Twitter, and Facebook, where he shares updates on new music, performances, and collaborations.</p>
+  </details>
+</div>
+
+
+<h2>Available albums</h2>
+<!-- Style 2: Modern with Animation -->
+<div class="faq-modern">
+
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">Your Piano Is Not My piano
+     <a href="YPINMP.html" >   <span>Listen</span></a>
+    </div>
+    <div class="faq-answer">
+      <div class="faq-content">
+        This album showcased his ability to blend Amapiano with international sounds,
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </main>
+
 
 
 
