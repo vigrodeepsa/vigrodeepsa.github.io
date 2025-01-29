@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigro Deep App Created By Lodwick</title>
+    <link rel="stylesheet" href="./css/style.css">
+<style type="text/css">
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 60px; /* Adjusted for the height of the header */
+    right: -250px;
+    width: 250px;
+    height: calc(100% - 60px); /* Full height minus the header */
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    overflow-y: auto;
+    transition: right 0.3s;
+    z-index: 999;
+}
+.sidebar.open {
+    right: 0;
+}
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+}
+.sidebar ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: block;
+        padding: 2px;
+}
+.sidebar ul li a:hover {
+    background-color: #f0f0f0;
+    border:2px solid black;
+}
+.active{
+border:2px solid black;
+    
+}
+.ad-placeholder {
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    backdrop-filter: blur(5px); /* Blur effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+
+    border: 1px dashed #ddd;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+.main{
+padding-top:70px;
+}
+</style>
+</head>
+
+<div class="web-name">
+           <div  id="ham" class="hamburger" onclick="toggleSidebar()">
+            <img src="./img/vigrodeep.jpg"></img>
+                    </div>
+    <h1 id="app-name">Loading</h1>
+</div>
+
+
+<div class="sidebar" id="sidebar">
+
+    <div class="ad-placeholder" onclick="loadPage('album.html')">
+Developed By Lodwick Masete
+    </div>
+    
+    <div class="ad-placeholder" onclick="loadPage('album.html')">
+want your own ?
+ W/A 0720261036
+    </div>
+
+    check out More Apps
+
+<div class="ad-placeholder" onclick="loadPage('album.html')">
+Grass is Greener
+<svg style="width:30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+  <g>
+    <polygon points="16.4,8.5 15.1,7.3 11,11.4 11,2.4 9.2,2.4 9.2,11.3 5.2,7.3 3.9,8.5 9.5,14.1 9.5,14.1 9.5,14.1 10.8,14.1 10.8,14.1"/>
+    <rect x="9.4" y="10.4" transform="matrix(7.140339e-11 -1 1 7.140339e-11 -6.4204 26.9234)" width="1.8" height="12.6"/>
+  </g>
+</svg>
+</div>
+
+    
+</div>
+    
+    </div>
+
+<main class="main">
+<a href="#" onclick="toggleSidebar()" >Comming Soon</a>
+</main>
+
+
+
+</html>
+<script type="text/javascript">
+var app = [
+  {
+    "developer": "Lodwick Masete",
+    "name": "Vigro Deep SA",
+    "album": "Your Piano is Not My Piano",
+  }
+];
+var img ='<img src="./img/vigrodeep.jpg"></img>';
+var img2 ='<img src="./img/cover.jpg"></img>';
+var appName = document.getElementById("app-name");
+var album = document.getElementById("album");
+var hamburger = document.getElementById("ham");
+// Access the first object in the array
+appName.innerHTML = app[0].name;
+///album.innerHTML = app[0].album;
+
+
+window.toggleSidebar = function () {
+const sidebar = document.getElementById('sidebar');
+sidebar.classList.toggle('open');
+
+// Correctly toggle the hamburger icon
+hamburger.innerHTML = sidebar.classList.contains('open') ? img2 : img;
+};
+
+
+</script>

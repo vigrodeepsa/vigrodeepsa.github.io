@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigro Deep App Created By Lodwick</title>
+    <link rel="stylesheet" href="./css/style.css">
+<style type="text/css">
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 60px; /* Adjusted for the height of the header */
+    right: -250px;
+    width: 250px;
+    height: calc(100% - 60px); /* Full height minus the header */
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    overflow-y: auto;
+    transition: right 0.3s;
+    z-index: 999;
+}
+.sidebar.open {
+    right: 0;
+}
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+}
+.sidebar ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: block;
+        padding: 2px;
+}
+.sidebar ul li a:hover {
+    background-color: #f0f0f0;
+    border:2px solid black;
+}
+.active{
+border:2px solid black;
+    
+}
+.ad-placeholder {
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    backdrop-filter: blur(5px); /* Blur effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+
+    border: 1px dashed #ddd;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<div class="web-name">
+           <div  id="ham" class="hamburger" onclick="toggleSidebar()">
+            <img src="./img/vigrodeep.jpg"></img>
+                    </div>
+    <h1 id="app-name">Loading</h1>
+</div>
+
+<img  class="cover" src="./img/vigrodeep.jpg"></img>
+<div class="sidebar" id="sidebar">
+
+    <div class="ad-placeholder" onclick="loadPage('f.html')">
+Developed By Lodwick Masete
+    </div>
+    
+    <div class="ad-placeholder" onclick="loadPage('f.html')">
+want your own ?
+ W/A 0720261036
+    </div>
+
+    check out More Apps
+
+<div class="ad-placeholder" onclick="loadPage('f.html')">
+Grass is Greener
+<svg style="width:30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+  <g>
+    <polygon points="16.4,8.5 15.1,7.3 11,11.4 11,2.4 9.2,2.4 9.2,11.3 5.2,7.3 3.9,8.5 9.5,14.1 9.5,14.1 9.5,14.1 10.8,14.1 10.8,14.1"/>
+    <rect x="9.4" y="10.4" transform="matrix(7.140339e-11 -1 1 7.140339e-11 -6.4204 26.9234)" width="1.8" height="12.6"/>
+  </g>
+</svg>
+</div>
+
+    
+</div>
+    
+    </div>
+
+<div class="header">
+    <h1 id="album">Loading</h1>
+</div>
+
+
+
+
+<div class="container">
+<div id="song-list" class="song-list"></div>
+</div>
+
+</html>
+<script type="text/javascript">
+var app = [
+  {
+    "developer": "Lodwick Masete",
+    "name": "Vigro Deep SA",
+    "album": "Your Piano is Not My Piano",
+  }
+];
+var img ='<img src="./img/vigrodeep.jpg"></img>';
+var img2 ='<img src="./img/cover.jpg"></img>';
+var appName = document.getElementById("app-name");
+var album = document.getElementById("album");
+var hamburger = document.getElementById("ham");
+// Access the first object in the array
+appName.innerHTML = app[0].name;
+album.innerHTML = app[0].album;
+
+
+window.toggleSidebar = function () {
+const sidebar = document.getElementById('sidebar');
+sidebar.classList.toggle('open');
+
+// Correctly toggle the hamburger icon
+hamburger.innerHTML = sidebar.classList.contains('open') ? img2 : img;
+};
+
+
+</script>
+
+<script type="text/javascript">
+var playIcon =`
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round">
+    <polygon points="5 3 19 12 5 21 5 3" />
+</svg>`;
+var pauseIcon =`
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round">
+    <rect x="6" y="4" width="4" height="16" />
+    <rect x="14" y="4" width="4" height="16" />
+</svg>`;
+const audioData = [
+    {
+        "title": "Tsamaiso",
+        "artist": "Vigro Deep & Freddy K feat. Mr. JazziQ",
+        "source": "./mp3/Vigro_Deep,_Freddy_K_-_Tsamaiso_(Visualizer)_ft._Mr._JazziQ.MP3",
+        "image": "./img/cover.jpg"
+    },
+    
+    {
+        "title": "House 22",
+        "artist": "Vigro Deep & Freddy K",
+      "source": "./mp3/Vigro_Deep,_Freddy_K_-_House_22_(Visualizer).MP3",
+        "image": "./img/cover.jpg"
+    },
+    {
+        "title": "Nomsa",
+        "artist": "Vigro Deep & Freddy K feat. Ch'cco",
+      "source": "./mp3/Vigro_Deep,_Freddy_K_-_Nomsa_(Visualizer)_ft._Ch'cco.MP3",
+        "image": "./img/cover.jpg"
+    },
+    {
+        "title": "Mandebi",
+        "artist": "Vigro Deep & Freddy K",
+      "source": "./mp3/Vigro_Deep,_Freddy_K_-_Mandebi_(Visualizer).mp3",
+        "image": "./img/cover.jpg"
+    },
+    {
+        "title": "Burcos",
+        "artist": "Vigro Deep & Freddy K",
+      "source": "./mp3/Vigro_Deep,_Freddy_K_-_Burcos_(Visualizer).mp3",
+        "image": "./img/cover.jpg"
+    },
+    {
+        "title": "Ranki",
+        "artist": "Vigro Deep & Freddy K",
+      "source": "./mp3/Vigro_Deep,_Freddy_K_-_Ranki_(Visualizer).MP3",
+        "image": "./img/cover.jpg"
+    },
+    {
+        "title": "Amakhehla",
+        "artist": "Vigro Deep & Freddy K",
+      "source": "./mp3/Vigro_Deep,_Freddy_K,_Mr._JazziQ_-_Amakhehla_(Visualizer)_ft._Scotts_Maphuma,_CowBoii.MP3",
+        "image": "./img/cover.jpg"
+    },
+    {
+        "title": "0008",
+        "artist": "Vigro Deep & Freddy K",
+      "source": "./mp3/Vigro_Deep,_Freddy_K_-_0008_(Visualizer).MP3",
+        "image": "./img/cover.jpg"
+    },
+    {
+        "title": "There's A lot Going On",
+        "artist": "Vigro Deep & Freddy K",
+        "source": "./mp3/Vigro_Deep,_Freddy_K_-_There's_Alot_Going_On_(Visualizer).MP3",
+        "image": "./img/cover.jpg"
+    }
+
+];
+
+const songListContainer = document.getElementById("song-list");
+let currentAudio = null; // To track the currently playing audio
+
+// Render songs
+audioData.forEach((song, index) => {
+    const songCard = `
+        <div class="song-card" data-index="${index}">
+            <div class="song-content">
+                <div class="image-container">
+                    <img src="${song.image}" alt="${song.title}">
+                    <div class="playing">
+                        <span class="playing__bar playing__bar1"></span>
+                        <span class="playing__bar playing__bar2"></span>
+                        <span class="playing__bar playing__bar3"></span>
+                    </div>
+                </div>
+                <div class="song-info">
+                    <h3>${song.title}</h3>
+                    <p>${song.artist}</p>
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="duration-info">
+                        <span class="current-duration">0:00</span>
+                        <span class="max-duration">--:--</span>
+                    </div>
+                </div>
+            </div>
+            <button class="play-btn">${playIcon}</button>
+        </div>
+
+    `;
+    songListContainer.innerHTML += songCard;
+});
+
+document.querySelectorAll(".play-btn").forEach((button) => {
+    button.addEventListener("click", (e) => {
+        const songCard = e.target.closest(".song-card");
+        const index = parseInt(songCard.getAttribute("data-index"));
+        const song = audioData[index];
+        const progressContainer = songCard.querySelector(".progress-container");
+        const progressBar = songCard.querySelector(".progress-bar");
+        const currentDuration = songCard.querySelector(".current-duration");
+        const maxDuration = songCard.querySelector(".max-duration");
+        const playingBars = songCard.querySelector(".playing");
+
+        if (!song.audio) {
+            song.audio = new Audio(song.source);
+        }
+
+        const audio = song.audio;
+
+        // Pause the currently playing audio if different
+        if (currentAudio && currentAudio !== audio) {
+            currentAudio.pause();
+            document.querySelectorAll(".play-btn").forEach((btn) => {
+                btn.innerHTML = playIcon;
+            });
+
+            document.querySelectorAll(".playing").forEach((bar) => {
+                bar.classList.remove("active");
+            });
+        }
+
+        if (audio.paused) {
+            audio.play();
+            e.target.innerHTML = pauseIcon;
+            currentAudio = audio;
+            currentIndex = index;
+            playingBars.classList.add("active");
+        } else {
+            audio.pause();
+            e.target.innerHTML= playIcon;
+            playingBars.classList.remove("active");
+            return;
+        }
+
+        // Display the total duration of the song
+        audio.addEventListener("loadedmetadata", () => {
+            const minutes = Math.floor(audio.duration / 60);
+            const seconds = Math.floor(audio.duration % 60).toString().padStart(2, "0");
+            maxDuration.innerHTML = `${minutes}:${seconds}`;
+        });
+
+        // Update progress bar and current time during playback
+        audio.addEventListener("timeupdate", () => {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = progress + "%";
+
+            const minutes = Math.floor(audio.currentTime / 60);
+            const seconds = Math.floor(audio.currentTime % 60).toString().padStart(2, "0");
+            currentDuration.textContent = `${minutes}:${seconds}`;
+        });
+
+        // Seek functionality (click on the progress bar)
+        progressContainer.addEventListener("click", (event) => {
+            const rect = progressContainer.getBoundingClientRect();
+            const offsetX = event.clientX - rect.left; // Click position relative to the container
+            const newTime = (offsetX / rect.width) * audio.duration; // Calculate new time
+            audio.currentTime = newTime; // Set audio to new time
+
+            // Update the progress bar immediately
+            const newProgress = (newTime / audio.duration) * 100;
+            progressBar.style.width = newProgress + "%";
+        });
+
+        // Play the next song when the current one ends
+        audio.addEventListener("ended", () => {
+            progressBar.style.width = "0%";
+            currentDuration.textContent = "0:00";
+            playingBars.classList.remove("active");
+            e.target.innerHTML = playIcon;
+
+            const nextIndex = (currentIndex + 1) % audioData.length;
+            const nextSongCard = document.querySelector(`.song-card[data-index="${nextIndex}"]`);
+            nextSongCard.querySelector(".play-btn").click();
+        });
+    });
+});
+</script>
